@@ -1,0 +1,25 @@
+@font-face {font-family: "iconfont";
+  src: url('../fonts/iconfont.eot?t=1558690340055'); /* IE9 */
+  src: url('../fonts/iconfont.eot?t=1558690340055#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('data:application/x-font-woff2;charset=utf-8;base64,d09GMgABAAAAAAOMAAsAAAAAB5QAAAM+AAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHEIGVgCDBgqCeIJbATYCJAMMCwgABCAFhG0HOxumBhHVm6nIvkiwbRGv36HLlAxd9CuhGRq6JQgw7/tJk2L7VtKH4ZPEcwOgAQJi+Nef/+KcJ1WjItRIzp48+kJSHGU5LRxOu0Lnz7Lc3r/2McA4oMDOP5RoAWLD2E0EDXEzBGATKZ2oXLV2YywUoJcARO8e3TpgZdSohlyBhcComKgQ89GxtBnaNWAe/734Sm4WaOgSsFX9rlU6U/5D3Ic8Od4Z31ouY8J0RsCYBhJIBwpE20pzc2QUTiexPbFqTjVQCLSpfI7D2b7U2OgfTwNhALLdAUiWRdpFcTADAj7ksWQcILsbgAkMATZIWP/HKqR/pPIOdXcbsXx7vPfWnaHmql1JXrMupzTZcYDW+oSVgU2XbrUZv912n1nzDGErl1i1y+Uxa0cItnCn19Kltj1zsT9LlgS4li0LGrWj1wPu33pQ8kHTpUv9771p+uBps4evm9xv7N/+4cNmDx40vXev8f37LRNDE9CaRpfGMn/09+7/w/Tmr4kIbuq9caPoHFLTzbZ3NN20qctK+0+wE1w/yDH/1PxS84/pBH1QBtd6df5V6kNjpdXfWmmcMlf0B59YYZI92WXYnt0/Re1ddTTP7t27dW+6fvClDt02FN6N2XMyeF/i0YiQm8HHPKZWGFKtc/VRcp6kEXLkpg0j2eHrNouRctjG9V0jZOfJI5oIr8zaZr0WZWgPgHNewvzyzkeH0uSy37QbCe9Qrp1X6f+WSwHw2ONpPOd3s4J1ExYBP0WpaEDk+zygkcoV0cgOPZKqjBzSANu34QDsvl4MlwRMzqZWi4AENEwiQGIRj1TYdNBxkQ8GFuXAJk216S78DEQilBuQaooEAm/7QMOTcyDxdh2psM9BJ9B3MPBOgk1T4begi8TUaB8HohZ0YP4Q7TQS0okSuTf076I5zePkF/IafdBWTT52xRF5iiHrx3ciBMTTABdpOyxlgpmnhFaqIDL3dU1Vb6rsNGwUR0Yt6MD8IdppJFpbVOH7N/Tvormhosf8Ql5j49BWTQfkVTx2qriVa9aP70QIiKcBLpIRCwxPMFe3S2ilCgOCc18r1airuFpeOrzfOsAGLCiFJqRQHAZ1+KCiDqN3OkWq2mwAAAA=') format('woff2'),
+  url('../fonts/iconfont.woff?t=1558690340055') format('woff'),
+  url('../fonts/iconfont.ttf?t=1558690340055') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+ */
+  url('../fonts/iconfont.svg?t=1558690340055#iconfont') format('svg'); /* iOS 4.1- */
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-save:before {
+  content: "\e623";
+}
+
+.icon-fangdajing:before {
+  content: "\e633";
+}
+

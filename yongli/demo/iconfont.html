@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<link rel="stylesheet" href="../src/assets/css/iconfont.css">
+	<style>
+		i.iconfont{
+			font-size: 48px;
+		}
+		em{
+			font-style: normal;
+			white-space: nowrap;
+			color: #666;
+		}
+
+		#wrapper{
+			display: flex;
+			flex-wrap: wrap;
+		}
+		#wrapper>div{
+			flex-direction: column;
+			display: flex;
+			width: 250px;
+			font-family: Tahoma, 微软雅黑;
+			text-align: center;
+			margin: 10px;
+			padding: 10px;
+			transition: all 0.2s;
+		}
+		#wrapper>div:hover{
+			box-shadow: 3px 2px 5px 5px #737d8847;
+			border-radius: 3px;
+		}
+		#wrapper>div:hover em{
+			font-weight: bold;
+		}
+	</style>
+
+	<div id="wrapper">
+		<div>
+			<i class="icon-role iconfont"></i>
+			<em>icon-role</em>
+		</div>
+		<div>
+			<i class="icon-role iconfont"></i>
+			<em>icon-role</em>
+		</div>
+		
+	</div>
+
+	<script type="text/html" id="cssContent">
+		@font-face {font-family: "iconfont";
+  src: url('../fonts/iconfont.eot?t=1558576922267'); /* IE9 */
+  src: url('../fonts/iconfont.eot?t=1558576922267#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('data:application/x-font-woff2;charset=utf-8;base64,d09GMgABAAAAAAL0AAsAAAAABpwAAAKnAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHEIGVgCCcAqBJIE6ATYCJAMICwYABCAFhG0HNBvkBcgOJQURwSwGIgBMPPy3xu++2fmm0j0inqzh1TSSoNE5lCReEtU8UdnJNU2XMbrYEaJ6ykOf2jRDFLKTJTV2YyGZz0/o+cS90+Z5F8h8510uaw5b/DHAOJACGmPYmqLF2DB2gUvYTqDWoAyW3aaOARAss/oF4qIisSA4F5Fllq8WKmumZvFQhep0P13gQfj7+Gk1gkkqClbZgdONAqj5km/3gEvlkuPFpnvzucBmUWAekIkjtZl9oGBMqDbjbxTYV3HwZe2/9G1ir2bB/jqrsB70Q8k9SV3ZrfInkKnPEuDIqPNS9NaH3NhKHdx6vHkqezrmdLY/fBh6eh9+/h18HIhnnp+Hn56GHh4GHh/HUucgAOSDKCcX4sm93b+Wjp3OFHlWluQhN33HSp6i+5G9p90Hk4cDKdfdRw0bW5eahZZZ6H0c03DG57kePMT1JGbgpNd9egAKa9NHLVGLe4K6RytBDaD8Wt7JfsWjX7mfMwPnx09FVfyrrsvgfT3qDRX9fFSf0Bv8OHWehfRfocstS8qqpfyKGMmS/IaEUMT9Slag1ddYQ8ddukJ1TsqQVBlAodo4OdPnUaHOOipV20CtOc2z67QhoMg1mLUOEJodIGn0CoVml+RM/0SFTn+o1BwQtY5F3JJ1JkMJrSeYpVhA3DRSeNMQHTsNjYr7sDSusSQrD1lDmDiUOMrNyinmm7GByRwjHBNSHqUiEompoyawG9Y0E9mIacU8zZIptZVlZ4t1N8riTR2E2kFgLAoTIJxpiIJnMoh+dSq09P0+mGSchkVaCDXBIRjhoDSO5MqS04PcrDF6Ee7lEIcJkjwUJUJEhEmHNAEXptkZE2Kr72SF8ags8oiUTZlsVEnsq8laX6d/3RqoZRlT2M0KtadZQxJYq+KbAQAA') format('woff2'),
+  url('../fonts/iconfont.woff?t=1558576922267') format('woff'),
+  url('../fonts/iconfont.ttf?t=1558576922267') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+ */
+  url('../fonts/iconfont.svg?t=1558576922267#iconfont') format('svg'); /* iOS 4.1- */
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-save:before {
+  content: "\e623";
+}
+
+.icon-fangdajing:before {
+  content: "\e633";
+}
+
+
+	</script>
+
+	<script>
+
+		window.txt = document.getElementById('cssContent').textContent;
+
+		const html = txt.match(/(\.icon-.+)\s{0,}:/gm).map(v=>v.replace(/\.|\:/g, '')).reduce((str, item)=>{
+			const html = `<div>
+							<i class="iconfont ${ item }"></i>
+							<em>${ item }</em>
+						</div>`;
+			return str.concat(html);
+		}, '');
+
+		document.getElementById('wrapper').innerHTML = html;
+	</script>
+
+</body>
+</html>

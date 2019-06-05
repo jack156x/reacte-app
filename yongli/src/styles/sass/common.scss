@@ -1,0 +1,95 @@
+/*全局通用类样式
+ * @Author: zzh0211@live.com 
+ * @Date: 2019-05-21 10:41:22 
+ * @Last Modified by: zzh0211@live.com
+ * @Last Modified time: 2019-06-05 11:07:30
+ */
+.ml-5{
+    margin-left: 5px!important;
+}
+.ml-10{
+    margin-left: 10px!important;
+}
+.mr-5{
+    margin-right: 5px!important;
+}
+.mr-10{
+    margin-right: 10px!important;
+}
+.mt-5{
+    margin-top: 5px!important;
+}
+.mt-10{
+    margin-top: 10px!important;
+}
+.mb-5{
+    margin-bottom: 5px!important;
+}
+.mb-10{
+    margin-bottom: 10px!important;
+}
+
+.pt-5{
+	padding-top: 5px!important;
+}
+.pt-10{
+	padding-top: 10px!important;
+}
+.pb-5{
+	padding-bottom: 5px!important;
+}
+.pb-10{
+	padding-bottom: 10px!important;
+}
+.pl-5{
+	padding-left: 5px!important;
+}
+.pl-10{
+	padding-left: 10px!important;
+}
+.pr-5{
+	padding-right: 5px!important;
+}
+.pr-10{
+	padding-right: 10px!important;
+}
+
+/*直角边框*/
+.square{
+    .el-input__inner,
+    .el-input-group__prepend{
+        border-radius: 0!important;
+    }
+}
+.square.el-input__inner{
+    border-radius: 0!important;
+}
+
+/*左侧直角边框*/
+.square-left{
+    .el-input__inner,
+    .el-input-group__prepend{
+        border-top-left-radius: 0!important;
+        border-bottom-left-radius: 0!important;
+    }
+}
+.square-left.el-input__inner{
+    border-top-left-radius: 0!important;
+    border-bottom-left-radius: 0!important;
+}
+
+/*右侧直角边框*/
+.square-right{
+    border-top-right-radius: 0!important;
+    border-bottom-right-radius: 0!important;
+
+    .el-input__inner,
+    .el-input-group__prepend{
+        border-top-right-radius: 0!important;
+        border-bottom-right-radius: 0!important;
+    }
+}
+.square-right.el-input__inner{
+    border-top-right-radius: 0!important;
+    border-bottom-right-radius: 0!important;
+}
