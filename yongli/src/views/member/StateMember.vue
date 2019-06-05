@@ -44,28 +44,28 @@
         </span>
         <span>
           取款金额：￥【
-          <span>7932.10</span>】
+          <span>{{subWithdrawal}}</span>】
         </span>
-        <span>存款次数：7932.10</span>
-        <span>取款次数：7932.10</span>
+        <span>存款次数：{{subAccountNumber}}</span>
+        <span>取款次数：{{subwithdrawalsNumber}}</span>
         <span>
           返水派送：￥【
-          <span>7932.10</span>
+          <span>{{SumReturnwater}}</span>
           】
         </span>
         <span>
           代理分润：￥【
-          <span>7932.10</span>
+          <span>{{SumAgentFenRun}}</span>
           】
         </span>
         <span>
           注册赠送：￥【
-          <span>7932.10</span>
+          <span>{{SumRegisterFree}}</span>
           】
         </span>
         <span>
           彩金派送：￥【
-          <span>7932.10</span>
+          <span>{{SumMosaicgoldde}}</span>
           】
         </span>
       </div>
@@ -137,7 +137,7 @@
           <el-table-column prop="date" label="总输赢" sortable></el-table-column>
         </template>
       </el-table>
-      <Pagination ref="pagination" :data="searchParams" url="member.log" @paging="pagingCallback"></Pagination>
+      <Pagination ref="pagination" :data="searchParams" url="member.memberInfo" @paging="pagingCallback"></Pagination>
     </section>
     <!-- 会员账号明细弹出窗口 -->
     <el-dialog :title="'【'+dialogtitle.Title+'】会员账户明细'" :visible.sync="deTaileTable" v-dialogDrag>
@@ -180,6 +180,13 @@ export default {
   data() {
     return {
       subPay_momey: '',
+      subWithdrawal: '',
+      subAccountNumber: '',
+      subwithdrawalsNumber: '',
+      SumReturnwater: '',
+      SumAgentFenRun: '',
+      SumRegisterFree: '',
+      SumMosaicgoldde: '',
       valueNum: 0,
       accountId: '',
       deTaileTable: false,
@@ -229,8 +236,14 @@ export default {
       this.tableData
         .map(row => row.id)
         .reduce((acc, cur) => {
-          console.log(cur)
-          this.subPay_momey += Number(cur)
+          this.subPay_momey += parseInt(cur)
+          // this.subWithdrawal += parseInt(cur)
+          // this.subAccountNumber += parseInt(cur)
+          // this.subwithdrawalsNumber += parseInt(cur)
+          // this.SumReturnwater += parseInt(cur)
+          // this.SumAgentFenRun += parseInt(cur)
+          // this.SumRegisterFree += parseInt(cur)
+          // this.SumMosaicgoldde += parseInt(cur)
         }, 0)
     },
     getDataTime(data) {
@@ -269,7 +282,6 @@ export default {
     },
     logPageSearch() {
       this.searchParams = {}
-      // this.$logger.log(this.searchParams)
       this.$nextTick(() => {
         this.$refs.pagination.refresh(this.searchParams)
       })
@@ -289,21 +301,7 @@ export default {
     transferDetaile(name) {
       this.dialogtitle.Title = name
       this.TranferDetail = true
-    },
-    initTime() {
-      const end = new Date()
-      const start = new Date()
-      start.setTime(start.getTime() - 3600 * 1000 * 24 * 1)
-      const startDate = moment(start).format('YYYY-MM-DD HH:mm:ss')
-      const endDate = moment(end).format('YYYY-MM-DD HH:mm:ss')
-      let createTime = []
-      createTime.push(startDate)
-      createTime.push(endDate)
-      this.datetime = createTime
     }
-  },
-  mounted() {
-    this.initTime()
   }
 }
 </script>
