@@ -734,11 +734,16 @@ export default {
     },
     groupToName() {
       return function(maparray, id) {
-        for (let item of maparray) {
+        if(maparray){
+           for (let item of maparray) {
           if (item.id == id) {
             return item.name
           }
         }
+        }else{
+          return ''
+        }
+       
       }
     }
   },
