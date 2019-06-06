@@ -79,7 +79,7 @@
           <el-table-column prop="bag_money" label="钱包余额">
             <template slot-scope="scope">
               <span class="account_text">{{ scope.row.bag_money}}</span>
-              <el-link class="iconfont icon-fangdajing text_pad" @click="dialogTable(scope.row.address)" style="color:gold;"></el-link>
+              <el-link class="iconfont icon-fangdajing text_pad" @click="dialogTable(scope.row)" style="color:gold;"></el-link>
             </template>
           </el-table-column>
           <el-table-column prop="pay_money" label="存款金额">
@@ -146,7 +146,7 @@
 
     <!-- 会员取款明细 -->
     <el-dialog :title="dialogtitle.Title+'会员存取款明细'" :visible.sync="LoadingLog" v-dialogDrag width="70%">
-      <Fund :accountId="accountId"></Fund>
+      <Fund :username="sentName" :view-types="viewType" :style="dialogCss"></Fund>
     </el-dialog>
 
     <!-- 会员账户流水 -->
@@ -183,6 +183,8 @@ export default {
       subWithdrawal: '',
       subAccountNumber: '',
       subwithdrawalsNumber: '',
+      sentName: '',
+      viewType: [1, 2],
       SumReturnwater: '',
       SumAgentFenRun: '',
       SumRegisterFree: '',
@@ -236,14 +238,15 @@ export default {
       this.tableData
         .map(row => row.id)
         .reduce((acc, cur) => {
+          // 字段还没有定，先这样放着，有字段替换下
           this.subPay_momey += parseInt(cur)
-          this.subWithdrawal += parseInt(cur)
-          this.subAccountNumber += parseInt(cur)
-          this.subwithdrawalsNumber += parseInt(cur)
-          this.SumReturnwater += parseInt(cur)
-          this.SumAgentFenRun += parseInt(cur)
-          this.SumRegisterFree += parseInt(cur)
-          this.SumMosaicgoldde += parseInt(cur)
+          // this.subWithdrawal += parseInt(cur)
+          // this.subAccountNumber += parseInt(cur)
+          // this.subwithdrawalsNumber += parseInt(cur)
+          // this.SumReturnwater += parseInt(cur)
+          // this.SumAgentFenRun += parseInt(cur)
+          // this.SumRegisterFree += parseInt(cur)
+          // this.SumMosaicgoldde += parseInt(cur)
         }, 0)
     },
     getDataTime(data) {
@@ -286,20 +289,21 @@ export default {
         this.$refs.pagination.refresh(this.searchParams)
       })
     },
-    dialogTable(name) {
-      this.dialogtitle.Title = name
+    dialogTable(data) {
+      this.dialogtitle.Title = data.username
       this.deTaileTable = true
     },
-    popuplayer(name) {
-      this.dialogtitle.Title = name
+    popuplayer(data) {
+      this.dialogtitle.Title = data.username
+      this.sentName = this.dialogtitle.Title
       this.LoadingLog = true
     },
-    WaterEjelayer(name) {
-      this.dialogtitle.Title = name
+    WaterEjelayer(data) {
+      this.dialogtitle.Title = data.username
       this.MemberWater = true
     },
-    transferDetaile(name) {
-      this.dialogtitle.Title = name
+    transferDetaile(data) {
+      this.dialogtitle.Title = data.username
       this.TranferDetail = true
     }
   }
