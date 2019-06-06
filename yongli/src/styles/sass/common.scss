@@ -2,7 +2,7 @@
  * @Author: zzh0211@live.com 
  * @Date: 2019-05-21 10:41:22 
  * @Last Modified by: zzh0211@live.com
- * @Last Modified time: 2019-06-05 11:07:30
+ * @Last Modified time: 2019-06-05 16:26:43
  */
 .ml-5{
     margin-left: 5px!important;
@@ -67,6 +67,9 @@
 
 /*左侧直角边框*/
 .square-left{
+    border-top-left-radius: 0!important;
+    border-bottom-left-radius: 0!important;
+    
     .el-input__inner,
     .el-input-group__prepend{
         border-top-left-radius: 0!important;

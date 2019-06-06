@@ -237,13 +237,13 @@ export default {
         .map(row => row.id)
         .reduce((acc, cur) => {
           this.subPay_momey += parseInt(cur)
-          // this.subWithdrawal += parseInt(cur)
-          // this.subAccountNumber += parseInt(cur)
-          // this.subwithdrawalsNumber += parseInt(cur)
-          // this.SumReturnwater += parseInt(cur)
-          // this.SumAgentFenRun += parseInt(cur)
-          // this.SumRegisterFree += parseInt(cur)
-          // this.SumMosaicgoldde += parseInt(cur)
+          this.subWithdrawal += parseInt(cur)
+          this.subAccountNumber += parseInt(cur)
+          this.subwithdrawalsNumber += parseInt(cur)
+          this.SumReturnwater += parseInt(cur)
+          this.SumAgentFenRun += parseInt(cur)
+          this.SumRegisterFree += parseInt(cur)
+          this.SumMosaicgoldde += parseInt(cur)
         }, 0)
     },
     getDataTime(data) {

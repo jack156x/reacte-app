@@ -32,10 +32,10 @@
 
         <section class="listContent mt-5">
             <el-table :data="tableData" border class="table" height="100%">
-                <el-table-column prop="id" width="50px"></el-table-column>
+                <el-table-column prop="no" width="50px"></el-table-column>
                 <el-table-column prop="username" label="查询账号" width="180" :show-overflow-tooltip="true">
                     <template slot-scope="scope">
-                        <el-link class="iconfont icon-fangdajing text_pad" @click="onLinedialogTable(scope.row)" style="color:#1ABC9C;"></el-link>
+                        <el-link class="iconfont icon-fangdajing text_pad" @click="onLinedialogTable(scope.row.username)" style="color:#1ABC9C;"></el-link>
 						<span class="account_text">{{ scope.row.username}}</span>
 					</template>
                 </el-table-column>
@@ -69,7 +69,7 @@
             <!-- 账号详情 -->
 			<el-dialog :title="dialogTitle" :visible.sync="onlineDialogVisible" width="670px"
 				@closed="currentDetails={}">
-				<onLineFormDetails :FormData="currentDetails" :readonly="readonly"></onLineFormDetails>
+				<onLineFormDetails :FormData="formValue" :readonly="readonly"></onLineFormDetails>
 			</el-dialog>
         </section>
     </div>
@@ -78,8 +78,8 @@
 <script>
 import Pagination from '@/components/Pagination'
 import onLineFormDetails from '@/views/member/MemberInfoDetail'
-import indentDetails from '@/views/finance/OnlineDepositDetail';
-import DepositAuditDetails from '@/views/finance/DepositAuditDetails'
+import indentDetails from '@/views/finance/OrderDetails';
+import DepositAuditDetails from '@/views/finance/WithdrawAudit'
     export default {
         props: {
             viewType: {
@@ -126,6 +126,7 @@ import DepositAuditDetails from '@/views/finance/DepositAuditDetails'
                 conditions: '',
                 defaultUrl: 'finance.onlinedeposits',
                 currentDetails: {},
+                formValue: {},
                 readonly: true,
                 detailDialogVisible: false,
                 onlineDialogVisible: false,
@@ -199,9 +200,9 @@ import DepositAuditDetails from '@/views/finance/DepositAuditDetails'
                this.currentDetails = data;
 			   this.detailDialogVisible = true;
             },
-            onLinedialogTable(data) {
-                this.currentDetails = data;
-				this.$logger.log(this.currentDetails);
+            onLinedialogTable(name) {
+                this.formValue = name;
+				this.$logger.log(this.formValue);
 				this.onlineDialogVisible = true;
             },
             confirmClick(data) {
@@ -214,7 +215,7 @@ import DepositAuditDetails from '@/views/finance/DepositAuditDetails'
 				return `【${this.currentDetails.username}】会员订单详情`;
             },
             dialogTitle() {
-				return `【${this.currentDetails.username}】会员信息`;
+				return `【${this.formValue}】会员信息`;
             },
             depositAuditTitle() {
                 return `【${this.currentDetails.name}】会员在线存款审核`
@@ -235,9 +236,9 @@ $color: rgb(26, 188, 156);
     padding: 0 5px;
 }
 .content { 
-    height: calc(100% - 54px); 
+    height: 100%; 
     .listContent { 
-        height: calc(100% - 67px);
+        height: calc(100% - 81px);
     }
     .table {
         width: 100%; height: 100%;

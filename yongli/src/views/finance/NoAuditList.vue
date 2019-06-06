@@ -64,7 +64,7 @@
 				</el-table-column>
 				<el-table-column prop="username" label="查询账号" width="180">
 					<template slot-scope="scope">
-						<el-link class="iconfont icon-fangdajing text_pad" @click="viewAccount(scope.row)" style="color:#1ABC9C;"></el-link>
+						<el-link class="iconfont icon-fangdajing text_pad" @click="viewAccount(scope.row.username)" style="color:#1ABC9C;"></el-link>
 						<span class="account_text">{{ scope.row.username}}</span>
 					</template>
 				</el-table-column>
@@ -107,7 +107,7 @@
 			<!-- 账号详情 -->
 			<el-dialog :title="dialogTitle" :visible.sync="noauditListDialogVisible" width="670px"
 				@closed="currentDetails={}">
-				<MemberInforDetail :FormData="currentDetails" :readonly="readonly"></MemberInforDetail>
+				<MemberInforDetail :FormData="formValue" :readonly="readonly"></MemberInforDetail>
 			</el-dialog>
             <!-- 订单详情 -->
             <el-dialog :title="detailDialogTitle" :visible.sync="detailDialogVisible" width="670px" @closed="currentDetails={}">
@@ -125,8 +125,8 @@
 	import moment from 'moment'
 	import Pagination from '@/components/Pagination'
 	import MemberInforDetail from '@/views/member/MemberInfoDetail'
-    import indentDetails from '@/views/finance/OnlineDepositDetail';
-	import DepositAuditDetails from '@/views/finance/DepositAuditDetails'
+	import indentDetails from '@/views/finance/OrderDetails';
+	import DepositAuditDetails from '@/views/finance/WithdrawAudit'
 	import { getMemberGroup } from '@/services/member'
 	export default {
 		props: {
@@ -172,6 +172,7 @@
                 detailDialogVisible: false,
                 depositAuditVisible: false,
 				currentDetails: {},
+				formValue: {},
 				readonly: true,
 				select_end_date: '',
 				select_start_date: ''
@@ -244,9 +245,9 @@
                this.currentDetails = data;
 			   this.detailDialogVisible = true;
             },
-			viewAccount(data) {
-				this.currentDetails = data;
-				this.$logger.log(this.currentDetails)
+			viewAccount(name) {
+				this.formValue = name;
+				this.$logger.log(this.formValue)
 				this.noauditListDialogVisible = true;
 			},
 			getRangeTime () {
@@ -274,13 +275,13 @@
 		},
 		computed: {
 			dialogTitle() {
-				return `【${this.currentDetails.name}】会员信息`;
+				return `【${this.formValue}】会员信息`;
             },
             detailDialogTitle(){
-				return `【${this.currentDetails.name}】会员订单详情`;
+				return `【${this.currentDetails.username}】会员订单详情`;
             },
             depositAuditTitle() {
-                return `【${this.currentDetails.time}】会员在线存款审核`
+                return `【${this.currentDetails.username}】会员在线存款审核`
 			},
 			offpayTypeList() {
 				return this.$store.getters["global/OFFPAY_TYPE"]
@@ -323,10 +324,10 @@
 	}
 	
 	.NoAuditContent {
-		height: calc(100% - 54px);
+		height: 100%;
 
 		.noAuditSection {
-			height: calc(100% - 67px);
+			height: calc(100% - 81px);
 		}
 
 		.noAuditTable {

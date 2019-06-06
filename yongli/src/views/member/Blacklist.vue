@@ -73,9 +73,9 @@ import Pagination from '@/components/Pagination'
 
 <style lang="scss">
 .blackContent { 
-	height: calc(100% - 54px);
+	height: 100%;
 	.table { 
-		height: calc(100% - 67px);
+		height: calc(100% - 81px);
 	}
 }
 </style>

@@ -177,10 +177,10 @@
 	}
 
 	.logContent {
-		height: calc(100% - 54px);
+		height: 100%;
 
 		.listContent {
-			height: calc(100% - 67px);
+			height: calc(100% - 81px);
 		}
 
 		.table {

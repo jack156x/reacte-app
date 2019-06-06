@@ -16,7 +16,7 @@
 	</section>
 	<template>
 		<section class="cardTable">
-			<el-table class="table" height="100%" :data="tableData" tooltip-effect="light" border>
+			<el-table class="table" height="100%" :data="tableData" border>
 			<el-table-column prop="no" label="" width="50" align="center"></el-table-column>
 			<el-table-column prop="id" label="查询账号" width="100" align="center"></el-table-column>
 			<el-table-column prop="owner_name" label="会员姓名" width="100" align="center"></el-table-column>
@@ -133,9 +133,9 @@ import addMemberBankDialog from "@/views/member/addMemberBankDialog"
 @import '@/styles/sass/variable.scss';
 .success { color: $successColor; }
 .cardContent {
-	height: calc(100% - 54px);
+	height: 100%;
 	.cardTable { 
-		height: calc(100% - 67px);
+		height: calc(100% - 81px);
 		.table { height: 100%;}
 	}
 	.refreshBtn,.newcreated { float: right; height: 30px; }

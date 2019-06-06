@@ -136,6 +136,8 @@ import EditMemberName from '@/views/member/EditMemberName'
 import MemberBank from '@/views/member/Card'
 import DeleteMember from '@/views/member/DeleteMember'
 import EditMemberPassword from '@/views/member/EditMemberPassword'
+import { scrypt } from 'crypto'
+import { Script } from 'vm'
 export default {
   name: 'keyinfo-edit',
   props: {
@@ -341,10 +343,10 @@ export default {
 }
 
 .tableContent {
-  height: calc(100% - 54px);
+  height: 100%;
 
   .showTableList {
-    height: calc(100% - 67px);
+    height: calc(100% - 81px);
   }
 
   .el-table {

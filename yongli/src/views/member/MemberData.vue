@@ -128,9 +128,6 @@ export default {
 <style lang="scss" scoped>
 $color: rgb(26, 188, 156);
 $white: #fff;
-.header_search {
-  // overflow: hidden;
-}
 .newcreated {
   float: right;
   padding: 8px;
@@ -138,9 +135,9 @@ $white: #fff;
 }
 
 .tableContent {
-  height: calc(100% - 54px);
+  height: 100%;
   .showTableList {
-    height: calc(100% - 67px);
+    height: calc(100% - 81px);
   }
   .el-table {
     width: 100%;
