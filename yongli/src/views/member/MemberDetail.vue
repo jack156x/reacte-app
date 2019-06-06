@@ -73,27 +73,34 @@ export default {
     transferInfo(infor) {
       this.username = infor.username
       this.withdraw_money = infor.withdraw_money
-      this.userId = infor.user
-      this.$logger.log(infor)
+      this.userId = infor.id
       this.title = '【' + this.username + '】转账信息'
       this.Visible = true
+      this.$logger.log(infor)
     },
     transfer() {
       this.Visible = false
       this.$logger.log(this.withdraw_money, this.username)
-      const params = {
+      let params = {
         user_id: this.userId
       }
-      moneyrakeback(params).then(res => {
-        this.$logger.log(res.detail)
-        if (res.hasOwnProperty('detail')) {
-          this.$notify({
-            title: '成功',
-            message: res.detail,
-            type: 'success'
+      moneyrakeback(params)
+        .then(res => {
+          this.$logger.log(res.detail)
+          if (res.hasOwnProperty('detail')) {
+            this.$notify({
+              title: '成功',
+              message: res.detail,
+              type: 'success'
+            })
+          }
+        })
+        .catch(err => {
+          this.$notify.error({
+            title: '错误',
+            message: err.data.detail
           })
-        }
-      })
+        })
       // 提交转账操作
     },
     getPropsaccountId() {
