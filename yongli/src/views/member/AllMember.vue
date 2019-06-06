@@ -101,10 +101,10 @@
         </template>
 
         <template v-if="groupMember">
-          <el-table-column key="6" prop="group" label="会员组别" :show-overflow-tooltip="true">
-            <template slot-scope="scope">
-              <span>{{groupToName(groupType,scope.row.group)}}</span>
-            </template>
+          <el-table-column key="6" prop="group" label="会员组别" :show-overflow-tooltip="true" :formatter="memberGrouptransfo">
+            <!-- <template slot-scope="scope"> -->
+            <!-- <span>{{groupToName(groupType,scope.row.group)}}</span> -->
+            <!-- </template> -->
           </el-table-column>
         </template>
 
@@ -731,20 +731,6 @@ export default {
       return function(value) {
         return (value = '0' ? 'el-icon-error' : 'el-icon-success')
       }
-    },
-    groupToName() {
-      return function(maparray, id) {
-        if(maparray){
-           for (let item of maparray) {
-          if (item.id == id) {
-            return item.name
-          }
-        }
-        }else{
-          return ''
-        }
-       
-      }
     }
   },
   mounted() {
@@ -754,6 +740,14 @@ export default {
     changeSelected(val) {
       this.multipleSelection = val
       this.$emit('selectedChange', val)
+    },
+    memberGrouptransfo(row, column) {
+      let temp = this.groupType.map((item, index, arr) => {
+        if (item.id == row.group) {
+          return item.name
+        }
+      })
+      return temp
     },
     Safetywarning(data) {
       const component = `WithdrawSafeWarn`
