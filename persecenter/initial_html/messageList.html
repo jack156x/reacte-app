@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>首页 - 玩家中心 - 大众棋牌</title>
+<meta charset="utf-8" />
+<meta name="keywords" content="keywords"/>
+<meta name="description" content="description"/>
+<meta name="author" content="author" />
+<meta name="Copyright" content="author" />
+<meta name="viewport" content="width=device-width"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<link rel="shortcut icon" href="/images/favicon.png"/>
+<link rel="apple-touch-icon" href="images/touchicon.png"/>
+<link rel="stylesheet" type="text/css" href="css/bootstrap-dialog.css"/>
+<link rel="stylesheet" type="text/css" href="css/font-awesome.css"/>
+<link rel="stylesheet" type="text/css" href="css/public-mod.css"/>
+<link rel="stylesheet" type="text/css" href="css/login.css"/>
+<link rel="stylesheet" type="text/css" href="css/bootstrap.css"/>
+<link rel="stylesheet" type="text/css" href="css/pcenter-style.css"/>
+<link rel="stylesheet" type="text/css" href="css/base.css"/>
+<link rel="stylesheet" type="text/css" href="css/zh_CN.css"/>
+<link rel="icon" type="image/png" href="images/favicon.png" sizes="32x32">
+<script type="text/javascript" src="js/message_zh_CN.js"></script>
+<script type="text/javascript" src="js/jquery1.91.min.js"></script>
+<script type="text/javascript" src="js/jquery.plugs.js"></script>
+<script type="text/javascript" src="js/js.js"></script>
+<script type="text/javascript">
+        var language = 'zh-CN';
+</script>
+    
+<script src="js/main.js"></script>
+<script data-curl-run="" src="js/curl.js"></script>
+<script type="text/javascript" language="JavaScript" src="js/urlencode.js"></script>
+<script type="text/javascript">
+    curl(['gb/components/selectPure'], function(Page) {
+        select = new Page();
+    });
+    curl(['zeroClipboard','clipboard'], function (zeroClipboard, Clipboard) {
+        window.ZeroClipboard=zeroClipboard;
+        window.clipboard = Clipboard;
+    });
+</script><!-- 提示弹出框 -->
+    <script type="text/javascript">
+        var environment = {
+            userCash: ''
+        };
+    </script>
+    <script type="text/javascript">
+        curl(['site/common/TopPage', 'site/home/TopNav', 'site/home/LeftNav',
+            'site/index/Comet', "site/index/Index","backgroundBlur",
+            'jqmetisMenu', 'jqnouislider'], function (TopPage, TopNav, LeftNav, Comet, Index,BackgroundBlur) {
+            topPage = new TopPage();
+            topNav = new TopNav();
+            leftNav = new LeftNav();
+            //msgManager = new MsgManager();
+            //shortcutMenu = new ShortcutMenu()
+            comet = new Comet();
+            index = new Index();
+            backgroundBlur = new BackgroundBlur();
+        });
+    </script>
+    </head>
+<body>
+<div class="hint-box" style="display: none" >
+    <span class="hint-content">
+        <i class="fa fa-exclamation-circle">温馨提示：使用谷歌浏览器，浏览时会更流畅，页面效果更好哦！</i>
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+        
+            
+                <a title='' class="close" data-rel='{"precall":"","callback":"",post:"",opType:"function",dataType:"",target:"hideBrowserTip",confirm:"",text:" × ",size:"" }' >
+                    
+                         × 
+                    
+                    
+                </a>
+            
+            
+            
+        
+
+
+
+
+
+</span>
+</div>
+<!--头部-->
+<div class="top-wrap">
+    <div class="top-top">
+        <!--顶部右边-->
+        <div class="top-right">
+            <div class="member">
+                <div id="site-nav">
+                    <ul>
+                <li>
+                    <div class="menu">
+                        <a class="menu-hd" href="javascript:;">
+                                    <span class="orange" id="ofullname">
+                                    linda</span>
+                            <b></b>
+                        </a>
+                        <div class="menu-bd box">
+                            <div class="global-account-head">
+                                <a href="javaScript:;" class="global-account-img">
+                                </a>
+
+                                <p class="global-account-name" title="name">
+                                    <span  class="_hours"></span>
+                                </p>
+                                <a class="accountSet" href="personInfo.html">个人资料</a>
+                                <span class="global-top-seperator">|</span>
+                                <a class="transactionRecords" href="gameOrder.html">投注记录</a>
+                            </div>
+
+                            <div class="global-account-money">
+                                总资产:
+                                <a href="javascript:;" class="show-remaining btn btn-filter btn-xs real-time-btn show-remaining">显示金额</a>
+                                        <span class="hide-astrict">
+                                            <em class="total-money astrict">
+                                            </em>
+                                            <i class="ico-ask showsmall refresh"></i>
+                                        </span>
+                                <p class="dottline space"></p>
+                                <div class="total">
+                                    <a name="recharge" href="recharge.html">存款</a>
+                                    <span class="global-top-seperator">|</span>
+                                    <a name="withdraws" href="withdrawList.html">取款</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul></div>
+                <a href="/pcenter/passport/logout.html" target="_top" class="logout">[退出]</a>
+                <label id="playerUnread">
+                    <label class="line-after info-down-btn">
+    <span class="new">
+        <i class="new-ico select"></i>
+        <a href="javascript:void(0)">新消息</a>
+        </span>
+</label>
+</label>
+            </div>
+        </div>
+        <!--顶部左边-->
+        <div class="top-left">
+            <div class="select-lang" id="divLanguage">
+                <p><span class="flag zh"></span>简体中文</p>
+                <ul style="display: none;"><li><a href="javascript:void(0)" change="language" lang="zh" country="CN" rel="zh"><span class="flag zh"></span>简体中文</a></li></ul>
+            </div>
+            <label class="time line-after">
+                <span id="userTime">GMT+08:00</span>
+                <span id="index-clock" class="nav-shadow clock-show"> </span>
+            </label>
+
+        </div>
+    </div>
+</div>
+<!--banner-->
+<div class="banner"  >
+    <a href="/">
+        <div class="logo"><img src="images/1540967008245.png_220x90.png"></div>
+    </a>
+    <div class="right">
+        <ul class="nav-menu">
+            <li>
+                <a class="nav-menu-ico aip-type-home-ico" href="/">
+                    <span>网站首页</span>
+                </a>
+            </li>
+            <li>
+                        <a class="nav-menu-ico aip-type-5-ico" href="/commonPage/gamePage/loading.html?apiId=34&apiTypeId=5">
+                            <span>棋牌</span>
+                        </a>
+                    </li>
+                <li>
+                        <a class="nav-menu-ico aip-type-2-ico" href="/casino.html?apiType=2&apiId=">
+                            <span>电子游艺</span>
+                        </a>
+                    </li>
+                <li>
+                        <a class="nav-menu-ico aip-type-1-ico" href="/live.html">
+                            <span>真人视讯</span>
+                        </a>
+                    </li>
+                <li>
+                <a class="nav-menu-ico aip-type-promo-ico" href="/promo.html">
+                    <span>优惠活动</span>
+                </a>
+            </li>
+        </ul>
+        </div>
+    <div class="banner-bg-t"></div>
+        <div class="banner-bg">
+            <img src="images/bannerbg.jpg">
+        </div>
+    </div>
+<div id="page-content" class="wrapper" style="min-height: 800px;">
+    <!--left-->
+    <div class="sidebar">
+        <!--左边菜单栏-->
+        <div class="sidebar-nav _nav_title">
+            <div class="left-nav-title">财务中心</div>
+                    <dl>
+                                    <dt class="">
+                                        <a  nav-target='mainFrame'
+                                                    data="/fund/playerTransfer/transfers.html?t=930824"  href="transfers.html">
+                                            <i class="navico home"></i>
+                                                额度转换</a>
+                                    </dt>
+                                </dl>
+                            <dl>
+                                    <dt class="">
+                                        <a  nav-target='mainFrame'
+                                                    data="recharge.html?t=930824"  href="recharge.html">
+                                            <i class="navico deposit"></i>
+                                                存款专区</a>
+                                    </dt>
+                                </dl>
+                            <dl>
+                                    <dt class="">
+                                        <a  nav-target='mainFrame'
+                                                    data="/player/withdraw/withdrawList.html?t=930824"  href="withdrawList.html">
+                                            <i class="navico withdraw"></i>
+                                                取款专区</a>
+                                    </dt>
+                                </dl>
+                            <dl>
+                                    <dt class="">
+                                        <a  nav-target='mainFrame'
+                                                    data="/fund/transaction/list.html?t=930824"  href="list.html">
+                                            <i class="navico capital"></i>
+                                                资金记录</a>
+                                    </dt>
+                                </dl>
+                            <dl>
+                                    <dt class="">
+                                        <a  nav-target='mainFrame'
+                                                    data="/gameOrder/index.html?t=930824"  href="gameOrder.html">
+                                            <i class="navico gamerecord"></i>
+                                                投注记录</a>
+                                    </dt>
+                                </dl>
+                            <dl>
+                                    <dt class="">
+                                        <a  nav-target='mainFrame'
+                                                    data="/preferential/list.html?t=930824"  href="preferential.html">
+                                            <i class="navico sale"></i>
+                                                优惠记录</a>
+                                    </dt>
+                                </dl>
+                            <div class="left-nav-title">个人中心</div>
+                    <dl>
+                                    <dt class="select">
+                                        <a  nav-target='mainFrame'
+                                                    data="gameNotice.html?t=930824"  href="gameNotice.html">
+                                            <i class="navico info"></i>
+                                                消息公告</a>
+                                    </dt>
+                                </dl>
+                            <dl>
+                                    <dt class="">
+                                        <a  nav-target='mainFrame'
+                                                    data="/personInfo/index.html?t=930824"  href="personInfo.html">
+                                            <i class="navico accout"></i>
+                                                个人资料</a>
+                                    </dt>
+                                </dl>
+                            <dl>
+                                    <dt class="">
+                                        <a  nav-target='mainFrame'
+                                                    data="/playerRecommendAward/recommendBonus.html?t=930824"  href="recommendBonus.html">
+                                            <i class="navico recommend"></i>
+                                                全民推广</a>
+                                    </dt>
+                                </dl>
+                            <dl>
+                                    <dt class="">
+                                        <a  nav-target='mainFrame'
+                                                    data="/personInfo/password/index.html?t=930824"  href="password.html">
+                                            <i class="navico recommend"></i>
+                                                修改密码</a>
+                                    </dt>
+                                </dl>
+                            </div>
+    </div>
+    <!--right-->
+    <div id="mainFrame" class="main-wrap"><form method="post" action="/pcentermessageList.html">
+        <div class="notice">
+            <div class="notice-left"><em class="path"></em></div>
+            <div class="path-right"><a class="cursor">消息公告</a><span class="arrow">&gt;</span>站点消息</div>
+        </div>
+
+        <!--选项卡-->
+        <div class="tabmenu">
+            <ul class="tab">
+                <li><a href="gameNotice.html" class="gameAnn" nav-target="mainFrame">游戏公告</a></li>
+                <li><a href="systemNoticeHistory.html" class="systemAnn" nav-target="mainFrame">系统公告</a></li>
+                <li><a href="javascript:void(0)" class="current siteMessage">站点消息</a></li>
+            </ul>
+        </div>
+        <div class="tabmenu tabmenu-2">
+            <ul class="tab-2">
+                <li><a href="messageList.html" class="current active" nav-target="mainFrame">系统消息</a>
+                </li>
+                <li>
+                    <a href="advisoryMessage.html" class="current" nav-target="mainFrame">我的消息</a>
+                </li>
+                <li><a href="beforeSendMessage.html" class="current no-badge" nav-target="mainFrame">发送消息</a></li>
+            </ul>
+        </div>
+
+        <!--表格内容-->
+        <div class="search-list-container">
+            <div class="chart-table info-notice">
+    <a style="display: none" class="returnMain" href="messageList.html?paging.pageNumber=1" nav-target="mainFrame"></a>
+    <table border="0" cellpadding="0" cellspacing="0" class="table dataTable">
+        <thead>
+            <tr>
+                <td colspan="4" class="none-p">
+                    <div class="pagination-total">
+                        <div class="alldelete">
+                            <input type="checkbox" value="" name="">全选<span class="function-menu-show show">
+                            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+        
+            
+                <a title="删除" class="btn btn-outline btn-filter" data-rel="{&quot;precall&quot;:&quot;&quot;,&quot;callback&quot;:&quot;&quot;,post:&quot;&quot;,opType:&quot;function&quot;,dataType:&quot;&quot;,target:&quot;deleteMessage&quot;,confirm:&quot;&quot;,text:&quot;删除&quot;,size:&quot;&quot; }">
+                    
+                        删除
+                    
+                    
+                </a>
+            
+            
+            
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+        
+            
+                <a title="标记已读" class="btn btn-outline btn-filter" data-rel="{&quot;precall&quot;:&quot;&quot;,&quot;callback&quot;:&quot;&quot;,post:&quot;&quot;,opType:&quot;function&quot;,dataType:&quot;&quot;,target:&quot;getSelectSystemMessageIds&quot;,confirm:&quot;&quot;,text:&quot;标记已读&quot;,size:&quot;&quot; }">
+                    
+                        标记已读
+                    
+                    
+                </a>
+            
+            
+            
+        
+
+
+
+
+
+</span>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                        <td class="no-content_wrap">
+                            <div>
+                                <i class="fa fa-exclamation-circle"></i> 暂无内容!</div>
+                        </td>
+                    </tr>
+                </tbody>
+    </table>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    
+    
+    
+    
+        
+    
+
+
+<div class="row bdtop3 ">
+    <input type="hidden" name="paging.pageNumber" value="1">
+    <input type="hidden" name="paging.prePage" value="1">
+    <input type="hidden" name="paging.nextPage" value="1">
+    <input type="hidden" name="paging.firstPageNumber" value="1">
+    <input type="hidden" name="paging.lastPageNumber" value="1">
+    <input type="hidden" name="paging.totalCount" value="0">
+
+    
+        <div class="col-sm-3">
+            <div aria-relevant="all" aria-live="polite" role="alert" id="editable_info" class="dataTables_info pull-left">
+                <ul class="pagination-pages">
+                    <li tabindex="0" aria-controls="editable" class="paginate_button "><span>每页显示</span></li>
+                </ul>
+            </div>
+            <div class="pull-left">
+                <select name="paging.pageSize" tabindex="-1" class="btn-group chosen-select-no-single dropup" style="width: 60px;" data-placeholder="20条">
+                    <option value="10">10条</option>
+                    <option selected="selected" value="20">20条</option>
+                    <option value="30">30条</option>
+                    <option value="50">50条</option>
+                    <option value="100">100条</option>
+                    <option value="200">200条</option>
+                </select>
+                <span class="m-l-sm">共0条</span>
+            </div>
+        </div>
+    
+
+    <div class="col-sm-9">
+        <div id="editable_paginate" class="dataTables_paginate paging_simple_numbers">
+
+            
+                <div class="pull-right pages show-hide-1095 page-skip form-inline">
+                        <input name="paging.pageNumberText" type="text" value="1" class="m-l-xs m-r-xs min form-control input-sm">页
+                        <button type="button" class="btn btn-sm m-l-sm">跳转</button>
+                </div>
+            
+            <ul class="pagination pull-right">
+                
+                    <li aria-controls="editable" class="paginate_button previous show-hide-768 disabled"><a name="paging.firstPageNumber" href="javascript:void(0);">首页</a></li>
+                
+                <li aria-controls="editable" class="paginate_button previous disabled"><a name="paging.prePage" href="javascript:void(0);">上一页</a></li>
+
+                
+                    
+
+                    
+                    
+                        
+                            <li class="paginate_button show-hide-768 current disabled"><a name="paging.Page" href="javascript:void(0)" data-page="0">1</a></li>
+                        
+                        
+                    
+
+                    
+                    
+
+                    
+                
+
+                <li aria-controls="editable" class="paginate_button next disabled"><a name="paging.nextPage" href="javascript:void(0);">下一页</a></li>
+                
+                    <li aria-controls="editable" class="paginate_button next show-hide-768 disabled"><a name="paging.lastPageNumber" href="javascript:void(0);">尾页</a></li>
+                
+            </ul>
+        </div>
+    </div>
+</div></div>
+</form>
+
+
+
+
+
+
+
+
+
+    
+    
+        <script type="text/javascript">
+            curl(['site/operation/message/announcementMessage'], function(Page) {
+                page = new Page();
+                page.bindButtonEvents();
+            });
+        </script>
+    
+</div>
+</div>
+<div class="preloader"></div>
+
+<div class="real-time-inform">
+    <div class="clearfix"><span class="unfold">
+        <i class="fa fa-angle-double-up m-r-xs pull-left"></i>
+        <a href="javascript:;" class="unfold-z"></a>
+        <a href="javascript:;" class="unfold-s"></a></span>
+    </div>
+    <div class="max-ccc">
+    </div>
+</div>
+
+
+</body>
+
+</html>
+

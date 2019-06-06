@@ -1,0 +1,265 @@
+.wrapper > .main-wrap {
+    min-height: 800px;
+  }
+  .main-wrap .notice {
+    height: 48px;
+    line-height: 44px;
+    background: #f7f8fa;
+  }
+  .main-wrap .notice-left {
+    float: left;
+  }
+  .gray {
+    color: #c7c7c7;
+  }
+  .user-info {
+    border: 1px solid #d3d8dc;
+    padding: 20px 20px 20px 20px;
+    margin-left: 20px;
+    margin-top: 20px;
+    margin-right: 20px;
+    border-radius: 4px;
+    box-shadow: 2px 2px 2px #f6f6f6;
+  }
+  .m-t-sm {
+    margin-top: 15px;
+  }
+  .line-hi32 {
+    line-height: 32px;
+  }
+  div,
+  p {
+    word-break: break-all;
+  }
+  .control-grouptwo {
+    display: block;
+  }
+  .control-grouptwo {
+    margin-top: 10px;
+  }
+  .control-grouptwo .control-left {
+    float: left;
+    width: 190px;
+    text-align: right;
+  }
+  .control-grouptwo .controls {
+    vertical-align: middle;
+  }
+  input {
+    border: 1px solid #ddd!important;
+  }
+  .input:hover {
+    background: #fff;
+    border: 1px solid #1e90ff!important;
+    background: #f0f4f7;
+  }
+  .input.bn {
+    width: 250px;
+    height: 30px;
+    padding-left: 10px;
+    margin-right: 5px;
+    transition: border linear 0.2s, box-shadow linear 0.2s;
+  }
+  select,
+  textarea,
+  input,
+  .uneditable-input {
+    display: inline-block;
+    margin-bottom: 6px;
+    font-size: 14px;
+    line-height: 20px;
+    color: #333;
+    vertical-align: middle;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+    border: 1px solid #d3d8dc;
+  }
+  .error {
+    border: 1px solid #f34235;
+  }
+  .tipsgray {
+    font-size: 14px;
+    color: #999;
+    margin-left: 190px;
+    margin-top: -5px;
+  }
+  .ud-select {
+    line-height: 39px;
+  }
+  .control-grouptwo .control-left {
+    float: left;
+    width: 190px;
+    text-align: right;
+  }
+  .bank-deposit {
+    margin-left: 15px;
+    display: block;
+    margin-bottom: 15px;
+    overflow: hidden;
+  }
+  .bank {
+    float: left;
+    cursor: pointer;
+    margin-right: 8px;
+    display: inline-block;
+    margin-top: 8px;
+    width: 166px;
+    height: 32px;
+    margin-left: 0px;
+    border-width: 2px;
+    border-style: solid;
+    border-color: rgb(226, 226, 226);
+    border-image: initial;
+    padding: 8px 0px 6px 8px;
+    border-radius: 4px;
+  }
+  .bank:hover,
+  .bank.select {
+    cursor: pointer;
+    width: 166px;
+    height: 32px;
+    border-width: 2px;
+    border-style: solid;
+    border-color: rgb(39, 114, 238);
+    border-image: initial;
+  }
+  .pay-bank.icbc {
+    background-position: 0px -60px;
+  }
+  .pay-bank.ccb {
+      background-position: 0px -120px;
+  }
+  .pay-bank.abc {
+      background-position: 0px -150px;
+  }
+  .pay-bank.boc {
+      background-position: 0px -180px;
+  }
+  .pay-bank.cmb {
+      background-position: 0px -90px;
+  }
+  .pay-bank.cmbc {
+      background-position: 0px -210px;
+  }
+  .pay-bank.ceb {
+      background-position: 0px -240px;
+  }
+  .pay-bank.cib {
+      background-position: 0px -360px;
+  }
+  .pay-bank.spdb {
+      background-position: 0px -300px;
+  }
+  .pay-bank.comm {
+      background-position: 0px -270px;
+  }
+  .pay-bank.spabank {
+      background-position: 0px -330px;
+  }
+  .pay-bank.bjbank {
+      background-position: 0px -390px;
+  }
+  .pay-bank.citic {
+      background-position: 0px -420px;
+  }
+  .pay-bank.gdb {
+      background-position: 0px -450px;
+  }
+  .pay-bank.psbc {
+      background-position: 0px -480px;
+  }
+  .pay-bank.jsbank {
+      background-position: 0px -510px;
+  }
+  .pay-bank.hxbank {
+      background-position: 0px -540px;
+  }
+  .pay-bank.shbank {
+      background-position: 0px -570px;
+  }
+  .pay-bank.bohaib {
+      background-position: 0px -600px;
+  }
+  .pay-bank.hkbea {
+      background-position: 0px -630px;
+  }
+  .pay-bank.nbbank {
+      background-position: 0px -660px;
+  }
+  .pay-bank.czbank {
+      background-position: 0px -690px;
+  }
+  .pay-bank.hzcb {
+      background-position: 0px -720px;
+  }
+  .pay-bank.gcb {
+      background-position: 0px -750px;
+  }
+  .pay-bank.fjnx {
+      background-position: 0px -780px;
+  }
+  .pay-bank.hangseng {
+      background-position: 0px -810px;
+  }
+  .pay-bank.tzb {
+      background-position: 0px -840px;
+  }
+  .pay-bank.jlbank {
+      background-position: 0px -873px;
+  }
+  .pay-bank.qdbank {
+      background-position: 0px -906px;
+  }
+  .pay-bank {
+    cursor: pointer;
+    vertical-align: middle;
+  }
+  .pay-bank,
+  .pay-third {
+    width: 125px;
+    display: inline-block;
+    height: 30px;
+    vertical-align: middle;
+    background: url(../../assets/images/pay-bank.png) left top no-repeat;
+  }
+  a {
+      color: rgb(39, 114, 238);
+  }
+  a:hover, a:focus {
+      color: rgb(248, 156, 44);
+      text-decoration: none;
+  }
+  element.style {
+      margin-right: 108px;
+      margin-bottom: 0;
+  }
+  .bank-spreadout {
+      text-align: right;
+      margin-right: 117px;
+      font-size: 13px;
+  }
+  .clear {
+    clear: both;
+  }
+  .control-grouptwo .control-label {
+      float: left;
+      width: 98px;
+      padding-top: 10px;
+      text-align: right;
+      vertical-align: top;
+  }
+  label {
+      cursor: default;
+  }
+  .middle-big {
+      width: 93px;
+      text-align: center;
+      font-family: "Microsoft YaHei";
+      border-radius: 3px;
+  }
+  .btn:hover {
+      background-color: rgb(59, 130, 247);
+      color: rgb(255, 255, 255);
+      border-color: rgb(59, 130, 247);
+  }

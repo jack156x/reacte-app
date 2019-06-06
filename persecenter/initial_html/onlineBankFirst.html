@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>首页 - 玩家中心 - 大众棋牌</title>
+<meta charset="utf-8" />
+<meta name="keywords" content="keywords"/>
+<meta name="description" content="description"/>
+<meta name="author" content="author" />
+<meta name="Copyright" content="author" />
+<meta name="viewport" content="width=device-width"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<link rel="shortcut icon" href="/images/favicon.png"/>
+<link rel="apple-touch-icon" href="images/touchicon.png"/>
+<link rel="stylesheet" type="text/css" href="css/bootstrap-dialog.css"/>
+<link rel="stylesheet" type="text/css" href="css/font-awesome.css"/>
+<link rel="stylesheet" type="text/css" href="css/public-mod.css"/>
+<link rel="stylesheet" type="text/css" href="css/login.css"/>
+<link rel="stylesheet" type="text/css" href="css/bootstrap.css"/>
+<link rel="stylesheet" type="text/css" href="css/pcenter-style.css"/>
+<link rel="stylesheet" type="text/css" href="css/base.css"/>
+<link rel="stylesheet" type="text/css" href="css/zh_CN.css"/>
+<link rel="icon" type="image/png" href="images/favicon.png" sizes="32x32">
+<script type="text/javascript" src="js/message_zh_CN.js"></script>
+<script type="text/javascript" src="js/jquery1.91.min.js"></script>
+<script type="text/javascript" src="js/jquery.plugs.js"></script>
+<script type="text/javascript" src="js/js.js"></script>
+<script type="text/javascript">
+        var language = 'zh-CN';
+</script>
+</head>
+<body>
+<div class="hint-box" style="display: none" > <span class="hint-content"> <i class="fa fa-exclamation-circle">温馨提示：使用谷歌浏览器，浏览时会更流畅，页面效果更好哦！</i> <a title='' class="close" data-rel='{"precall":"","callback":"",post:"",opType:"function",dataType:"",target:"hideBrowserTip",confirm:"",text:" × ",size:"" }' > × </a> </span> </div>
+<!--头部-->
+<div class="top-wrap">
+  <div class="top-top"> 
+    <!--顶部右边-->
+    <div class="top-right">
+      <div class="member">
+        <div id="site-nav">
+          <ul>
+            <li>
+              <div class="menu"> <a class="menu-hd" href="javascript:;"> <span class="orange" id="ofullname"> linda</span> <b></b> </a>
+                <div class="menu-bd box">
+                  <div class="global-account-head"> <a href="javaScript:;" class="global-account-img"> </a>
+                    <p class="global-account-name" title="name"> <span  class="_hours"></span> </p>
+                    <a class="accountSet" href="personInfo.html">个人资料</a> <span class="global-top-seperator">|</span> <a class="transactionRecords" href="gameOrder.html">投注记录</a> </div>
+                  <div class="global-account-money"> 总资产: <a href="javascript:;" class="show-remaining btn btn-filter btn-xs real-time-btn show-remaining">显示金额</a> <span class="hide-astrict"> <em class="total-money astrict"> </em> <i class="ico-ask showsmall refresh"></i> </span>
+                    <p class="dottline space"></p>
+                    <div class="total"> <a name="recharge" href="recharge.html">存款</a> <span class="global-top-seperator">|</span> <a name="withdraws" href="withdrawList.html">取款</a> </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <a href="/pcenter/passport/logout.html" target="_top" class="logout">[退出]</a>
+        <label id="playerUnread">
+        <label class="line-after info-down-btn"> <span class="new"> <i class="new-ico select"></i> <a href="javascript:void(0)">新消息</a> </span> </label>
+        </label>
+      </div>
+    </div>
+    <!--顶部左边-->
+    <div class="top-left">
+      <div class="select-lang" id="divLanguage">
+        <p><span class="flag zh"></span>简体中文</p>
+        <ul style="display: none;">
+          <li><a href="javascript:void(0)" change="language" lang="zh" country="CN" rel="zh"><span class="flag zh"></span>简体中文</a></li>
+        </ul>
+      </div>
+      <label class="time line-after"> <span id="userTime">GMT+08:00</span> <span id="index-clock" class="nav-shadow clock-show"> </span> </label>
+    </div>
+  </div>
+</div>
+<!--banner-->
+<div class="banner"  > <a href="/">
+  <div class="logo"><img src="images/1540967008245.png_220x90.png"></div>
+  </a>
+  <div class="right">
+    <ul class="nav-menu">
+      <li> <a class="nav-menu-ico aip-type-home-ico" href="/"> <span>网站首页</span> </a> </li>
+      <li> <a class="nav-menu-ico aip-type-5-ico" href="/commonPage/gamePage/loading.html?apiId=34&apiTypeId=5"> <span>棋牌</span> </a> </li>
+      <li> <a class="nav-menu-ico aip-type-2-ico" href="/casino.html?apiType=2&apiId="> <span>电子游艺</span> </a> </li>
+      <li> <a class="nav-menu-ico aip-type-1-ico" href="/live.html"> <span>真人视讯</span> </a> </li>
+      <li> <a class="nav-menu-ico aip-type-promo-ico" href="/promo.html"> <span>优惠活动</span> </a> </li>
+    </ul>
+  </div>
+  <div class="banner-bg-t"></div>
+  <div class="banner-bg"> <img src="images/bannerbg.jpg"> </div>
+</div>
+<div id="page-content" class="wrapper" style="min-height: 800px;"> 
+  <!--left-->
+  <div class="sidebar"> 
+    <!--左边菜单栏-->
+    <div class="sidebar-nav _nav_title">
+      <div class="left-nav-title">财务中心</div>
+      <dl>
+        <dt class=""> <a  nav-target='mainFrame'
+                                                    data="/fund/playerTransfer/transfers.html?t=930824"  href="transfers.html"> <i class="navico home"></i> 额度转换</a> </dt>
+      </dl>
+      <dl>
+        <dt class="select"> <a  nav-target='mainFrame'
+                                                    data="recharge.html?t=930824"  href="recharge.html"> <i class="navico deposit"></i> 存款专区</a> </dt>
+      </dl>
+      <dl>
+        <dt class=""> <a  nav-target='mainFrame'
+                                                    data="/player/withdraw/withdrawList.html?t=930824"  href="withdrawList.html"> <i class="navico withdraw"></i> 取款专区</a> </dt>
+      </dl>
+      <dl>
+        <dt class=""> <a  nav-target='mainFrame'
+                                                    data="/fund/transaction/list.html?t=930824"  href="list.html"> <i class="navico capital"></i> 资金记录</a> </dt>
+      </dl>
+      <dl>
+        <dt class=""> <a  nav-target='mainFrame'
+                                                    data="/gameOrder/index.html?t=930824"  href="gameOrder.html"> <i class="navico gamerecord"></i> 投注记录</a> </dt>
+      </dl>
+      <dl>
+        <dt class=""> <a  nav-target='mainFrame'
+                                                    data="/preferential/list.html?t=930824"  href="preferential.html"> <i class="navico sale"></i> 优惠记录</a> </dt>
+      </dl>
+      <div class="left-nav-title">个人中心</div>
+      <dl>
+        <dt class=""> <a  nav-target='mainFrame'
+                                                    data="gameNotice.html?t=930824"  href="gameNotice.html"> <i class="navico info"></i> 消息公告</a> </dt>
+      </dl>
+      <dl>
+        <dt class=""> <a  nav-target='mainFrame'
+                                                    data="/personInfo/index.html?t=930824"  href="personInfo.html"> <i class="navico accout"></i> 个人资料</a> </dt>
+      </dl>
+      <dl>
+        <dt class=""> <a  nav-target='mainFrame'
+                                                    data="/playerRecommendAward/recommendBonus.html?t=930824"  href="recommendBonus.html"> <i class="navico recommend"></i> 全民推广</a> </dt>
+      </dl>
+      <dl>
+        <dt class=""> <a  nav-target='mainFrame'
+                                                    data="/personInfo/password/index.html?t=930824"  href="password.html"> <i class="navico recommend"></i> 修改密码</a> </dt>
+      </dl>
+    </div>
+  </div>
+  <!--right-->
+  <div id="mainFrame" class="main-wrap"><!--网银存款步奏1-->
+    <form novalidate>
+      <input type="hidden" name="onlinePayMin" value="10.00">
+      <input type="hidden" name="onlinePayMax" value="99,999,999.00">
+      <input type="hidden" name="isRealName" value="false">
+      <input type="hidden" name="displayFee" value="false">
+      <a href="javascript:;" name="realNameDialog" style="display: none"></a>
+      <input type="hidden" name="gb.token" value="d94492a5-01cc-4bfe-9adb-99e0a611af04">
+      <div class="notice">
+        <div class="notice-left"> <em class="path"></em> </div>
+        <div class="path-right"> <a href="javascript:;">存款专区</a> </div>
+      </div>
+      <div class="deposit-info-warp  clearfix">
+        <div class="titleline pull-left">
+          <div class="btn-group table-desc-right-t-dropdown bank-down-menu">
+            <button type="button" class="btn btn btn-default" data-toggle="dropdown" aria-expanded="false"> <i class="pay-third ebankpay"></i> <span class="carat"></span> </button>
+            <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+              <li role="presentation"> <a role="menuitem" tabindex="-1" href="onlineBankFirst.html" key="20" nav-target="mainFrame"><i class="pay-third ebankpay"></i></a> </li>
+              <li role="presentation"> <a role="menuitem" tabindex="-1" href="quickPay.html" nav-target="mainFrame" key="30"><i class="pay-third quick_pay"></i></a> </li>
+              <li role="presentation"> <a role="menuitem" tabindex="-1" href="wechatpay.html" nav-target="mainFrame" key="30"><i class="pay-third wechatpay"></i></a> </li>
+              <li role="presentation"> <a role="menuitem" tabindex="-1" href="alipay.html" nav-target="mainFrame" key="30"><i class="pay-third alipay"></i></a> </li>
+              <li role="presentation"> <a role="menuitem" tabindex="-1" href="union.html" nav-target="mainFrame" key="30"><i class="pay-third unionpay"></i></a> </li>
+              <li role="presentation"> <a role="menuitem" tabindex="-1" href="cloudunionpay.html" nav-target="mainFrame" key="30"><i class="pay-third cloudunionpay"></i></a> </li>
+            </ul>
+          </div>
+        </div>
+        <a href="recharge.html" class="btn-gray btn btn-big pull-right" nav-target="mainFrame">返回上一级</a> </div>
+      <div class="account-list account-info-warp">
+        <div class="left-ico-message">
+          <h4>请选择银行</h4>
+          <span class="deposit-info-title">步骤1<img src="images/online-pay1.png"></span>
+          <div class="bank-deposit">
+            <div class="bank-total">
+              <label class="bank select"> <span class="radio">
+                <input name="account" type="radio" showsuccmsg="false" bankcode="icbc" account="4200204601008634263" value="e1c399745b615014203ad552e0f7c869" checked="">
+                </span> <span class="radio-bank" title="网银-转账"><i class="pay-bank sm icbc"></i><font class="diy-pay-title">网银-转账</font></span> <span class="bank-logo-name">网银-转账</span> </label>
+            </div>
+            <div class="clear"></div>
+          </div>
+        </div>
+      </div>
+      <div class="account-list account-info-warp">
+        <div class="left-ico-message clearfix">
+          <h4>请用存款至下方银行账户：</h4>
+          <span class="deposit-info-title">步骤2<img src="images/online-pay1.png"></span>
+          <div name="accountInfoicbc4200204601008634263" class="bank-paidtotal accountInfo" style="">
+            <ul>
+              <li>
+                <div class="bankinfo linbankinfo-m">
+                  <h1> <i class="pay-bank icbc"></i> <em class="cardlabel debit"></em> </h1>
+                  <span class="orange cardnumber select" data-clipboard-text="4200 2046 0100 8634 263" name="copy"> <em class="bank-number" id="bankCard962">4200 2046 0100 8634 263</em> <a href="javascript:;" class="btn-copy">复制</a> </span> <span class="paidname select" data-clipboard-text="程哲" name="copy"> <em class="gray">银行用户名：</em> <em class="gathering-name" id="fullName962">程哲</em> <a href="javascript:;" class="btn-copy">复制</a> </span> </div>
+              </li>
+            </ul>
+          </div>
+          <div name="accountInfoicbc4200204601008634263" class="accountInfo" style="">
+            <pre style="margin: 20px;white-space: pre-wrap;word-wrap: break-word;">★本棋牌的充值账号将会不定时更新，敬请各位玩家通过网站玩家中心充值频道查看最新的充值账号并进行转款。如充值至已停用账号网站将无法查收，恕不承担相应损失；建议您充值金额请加以小数点或尾数，以便区别。如充值200元，请输入201元或200.1之类小数。感谢您的配合！</pre>
+          </div>
+          <ul class="attention-list">
+            <li> <a href="javascript:;" class="openPage" data-href="/commonPage/help.html?pageNumber=1&amp;pagingKey=hpdc&amp;dataChildren=9">查看转账演示帮助？</a> </li>
+          </ul>
+          <div class="control-group bank-menu"> <a href="http://www.icbc.com.cn" type="button" target="_blank" class="btn btn-outline btn-filter">去中国工商银行转账</a> <a href="http://www.ccb.com" type="button" target="_blank" class="btn btn-outline btn-filter">去中国建设银行转账</a> <a href="http://www.95599.cn" type="button" target="_blank" class="btn btn-outline btn-filter">去中国农业银行转账</a> <a href="http://www.boc.cn" type="button" target="_blank" class="btn btn-outline btn-filter">去中国银行转账</a>
+            <div id="expendBanks" style="display:none"> <a href="http://www.cmbchina.com" type="button" target="_blank" class="btn btn-outline btn-filter">去招商银行转账</a> <a href="http://www.cmbc.com.cn" type="button" target="_blank" class="btn btn-outline btn-filter">去中国民生银行转账</a> <a href="http://www.cebbank.com" type="button" target="_blank" class="btn btn-outline btn-filter">去中国光大银行转账</a> <a href="http://www.cib.com.cn" type="button" target="_blank" class="btn btn-outline btn-filter">去兴业银行转账</a> <a href="http://www.spdb.com.cn" type="button" target="_blank" class="btn btn-outline btn-filter">去上海浦东发展银行转账</a> <a href="http://www.95559.com.cn" type="button" target="_blank" class="btn btn-outline btn-filter">去交通银行转账</a> <a href="http://bank.pingan.com" type="button" target="_blank" class="btn btn-outline btn-filter">去平安银行转账</a> <a href="http://www.bankofbeijing.com.cn" type="button" target="_blank" class="btn btn-outline btn-filter">去北京银行转账</a> <a href="http://bank.ecitic.com" type="button" target="_blank" class="btn btn-outline btn-filter">去中信银行转账</a> <a href="http://www.cgbchina.com.cn" type="button" target="_blank" class="btn btn-outline btn-filter">去广东发展银行转账</a> <a href="http://www.psbc.com" type="button" target="_blank" class="btn btn-outline btn-filter">去中国邮政储蓄银行转账</a> <a href="http://www.jsbchina.cn" type="button" target="_blank" class="btn btn-outline btn-filter">去江苏银行转账</a> <a href="http://www.hxb.com.cn" type="button" target="_blank" class="btn btn-outline btn-filter">去华夏银行转账</a> <a href="http://www.bankofshanghai.com" type="button" target="_blank" class="btn btn-outline btn-filter">去上海银行转账</a> <a href="http://www.cbhb.com.cn" type="button" target="_blank" class="btn btn-outline btn-filter">去渤海银行转账</a> <a href="http://www.hkbea.com.cn" type="button" target="_blank" class="btn btn-outline btn-filter">去东亚银行转账</a> <a href="http://www.nbcb.com.cn" type="button" target="_blank" class="btn btn-outline btn-filter">去宁波银行转账</a> <a href="http://www.czbank.com" type="button" target="_blank" class="btn btn-outline btn-filter">去浙商银行转账</a> <a href="http://www.hzbank.com.cn" type="button" target="_blank" class="btn btn-outline btn-filter">去杭州银行转账</a> <a href="http://www.gzcb.com.cn" type="button" target="_blank" class="btn btn-outline btn-filter">去广州银行转账</a> <a href="http://www.fjnx.com.cn" type="button" target="_blank" class="btn btn-outline btn-filter">去福建农商银行转账</a> <a href="http://www.hangseng.com.cn/" type="button" target="_blank" class="btn btn-outline btn-filter">去恒生银行转账</a> <a href="http://www.tzbank.com/" type="button" target="_blank" class="btn btn-outline btn-filter">去台州银行转账</a> <a href="http://www.jlbank.com.cn" type="button" target="_blank" class="btn btn-outline btn-filter">去吉林银行转账</a> <a href="http://www.qdccb.com" type="button" target="_blank" class="btn btn-outline btn-filter">去青岛银行转账</a> </div>
+            <a title="" class="more-pull-down" data-rel="{&quot;precall&quot;:&quot;&quot;,&quot;callback&quot;:&quot;&quot;,post:&quot;&quot;,opType:&quot;function&quot;,dataType:&quot;&quot;,target:&quot;expendBanks&quot;,confirm:&quot;&quot;,text:&quot;&quot;,size:&quot;&quot; }"> <span>查看更多网上银行</span><i class="bank-arrico down"></i> </a> </div>
+        </div>
+      </div>
+      <div class="account-list account-info-warp">
+        <div class="left-ico-message">
+          <h4>请填写存款金额：</h4>
+          <span class="deposit-info-title">步骤3<img src="images/online-pay2.png"></span>
+          <div class="control-group">
+            <label class="control-label" for="result.rechargeAmount">存款金额：</label>
+            <div class="controls">
+              <input type="text" value="" class="input error" placeholder="* 范围:10.00 ~ 99,999,999.00" name="result.rechargeAmount" id="result.rechargeAmount" autocomplete="off" aria-required="true" aria-invalid="true">
+              <span class="tips orange"><i class="mark plaintsmall"></i>请输入存款金额</span> <span class="fee"></span> </div>
+          </div>
+          <div class="control-group">
+            <label class="control-label" for="result.payerName">存款人姓名：</label>
+            <div class="controls">
+              <input type="text" id="result.payerName" name="result.payerName" placeholder="您转账时使用的银行卡姓名" class="input">
+            </div>
+          </div>
+          <div name="accountInfoicbc4200204601008634263" class="bank-paidtotal accountInfo" style=""> </div>
+          <input type="hidden" name="isOpenActivityHall" value="true">
+          <table width="100%" border="0" cellspacing="0" cellpadding="0">
+            <tbody>
+              <tr>
+                <td width="72" class="al-right" style="width: 202px"><span class="ci-count"> 温馨推荐</span></td>
+                <td width="500"><span class=""> &nbsp;&nbsp;完成存款后，可以前往活动大厅申请活动优惠</span></td>
+              </tr>
+            </tbody>
+          </table>
+          <div class=" control-group">
+            <label class="control-label"></label>
+            <a title="确定存款" class="btn-blue btn large-big disabled _submit" data-rel="{&quot;precall&quot;:&quot;validateForm&quot;,&quot;callback&quot;:&quot;&quot;,post:&quot;&quot;,opType:&quot;function&quot;,dataType:&quot;&quot;,target:&quot;submit&quot;,confirm:&quot;&quot;,text:&quot;确定存款&quot;,size:&quot;&quot; }"> 确定存款 </a> </div>
+          <div class="applysale">
+            <ul class="transfer-tips \AMG">
+              <li>温馨提示：</li>
+              <li>单笔储值最低<span style="color:red">CNY10.00</span>，最高为<span style="color:red">CNY99,999,999.00</span>，并须视各家银行转款上限而定。</li>
+              <li>先查看要入款的银行账号信息，然后通过网上银行、ATM、柜台或手机银行进行转账，转账成功后再如实提交转账信息，财务专员查收到信息后会及时添加您的款项。</li>
+              <li>请尽可能选择同行办理转账，可快速到账。</li>
+              <li>存款完成后，保留单据以利核对并确保您的权益。</li>
+              <li>建议您使用Internet Explorer 9以上、360浏览器、Firefox或Google Chrome等浏览器浏览。</li>
+              <li>如出现充值失败或充值后未到账等情况，请联系在线客服获取帮助。 <a title="点击联系在线客服" class="" data-rel="{&quot;precall&quot;:&quot;&quot;,&quot;callback&quot;:&quot;&quot;,post:&quot;&quot;,opType:&quot;function&quot;,dataType:&quot;&quot;,target:&quot;customerService&quot;,confirm:&quot;&quot;,text:&quot;点击联系在线客服&quot;,size:&quot;&quot;,&quot;url&quot;:&quot;https://chat6.livechatvalue.com/chat/chatClient/chatbox.jsp?companyID=262911&amp;configID=43611&amp;jid=3663497425&amp;s=1&quot; }"> 点击联系在线客服 </a> </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="modal-backdrop in" style="display: none" id="backdrop"></div>
+      <div class="modal inmodal in" style="display: none" id="confirmDialog" tabindex="-1" role="dialog">
+        <div class="modal-dialog">
+          <div class="modal-content animated bounceInRight family">
+            <div class="modal-header"> <span class="filter">完成存款，提交申请</span>
+              <button title="取消提交" class="close" type="button" data-rel="{&quot;precall&quot;:&quot;&quot;,&quot;callback&quot;:&quot;&quot;,post:&quot;&quot;,opType:&quot;function&quot;,dataType:&quot;&quot;,target:&quot;closeConfirmDialog&quot;,confirm:&quot;&quot;,text:&quot;取消提交&quot;,size:&quot;&quot; }"> <span aria-hidden="true">×</span> <span class="sr-only">关闭</span> </button>
+            </div>
+            <div class="modal-body">
+              <div class="withdraw-not text-15p">
+                <div class="form-group clearfix line-hi45 m-b-xxs" name="bitcoinRecharge">
+                  <label class="col-xs-5 al-right bold">比特币：</label>
+                  <div class="col-xs-6 p-x  f-size26" id="bitAmount"></div>
+                </div>
+                <div class="form-group clearfix line-hi45 m-b-xxs" name="companyRecharge">
+                  <label class="col-xs-5 al-right bold">存款金额：</label>
+                  <div class="col-xs-6 p-x f-size26" id="confirmRechargeAmount"></div>
+                </div>
+                <div class="form-group clearfix line-hi45 m-b-xxs" name="companyRecharge">
+                  <label class="col-xs-5 al-right bold">手续费/返手续费：</label>
+                  <div class="col-xs-6 p-x"> <em class="red f-size26" id="confirmFee"></em> </div>
+                </div>
+                <div class="form-group clearfix line-hi45 m-b-xxs" name="companyRecharge">
+                  <label class="col-xs-5 al-right bold">实际到账：</label>
+                  <div class="col-xs-6 p-x"> <em class="red f-size26" id="confirmRechargeTotal"></em> </div>
+                </div>
+                <div class="form-group clearfix line-hi45 m-b-xxs" name="postscriptFlag">
+                  <label class="col-xs-5 al-right bold">附言：</label>
+                  <div class="col-xs-6 p-x"> <em class="black" id="postscript"></em> </div>
+                </div>
+              </div>
+              <div class="clearfix bg-gray p-t-xs al-center">
+                <div class="clearfix line-hi25 p-sm caution-pop"> <em><i class="mark plaintsmall"></i>系统审核通过后，您的钱包余额将增加相应的“实际到账”金额。</em> </div>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button title="已存款，确认提交" class="btn btn-filter" type="button" data-rel="{&quot;precall&quot;:&quot;validateForm&quot;,&quot;callback&quot;:&quot;&quot;,post:&quot;&quot;,opType:&quot;function&quot;,dataType:&quot;&quot;,target:&quot;companyConfirmSubmit&quot;,confirm:&quot;&quot;,text:&quot;已存款，确认提交&quot;,size:&quot;&quot; }"> 已存款，确认提交 </button>
+              <button title="取消提交" class="btn btn-outline btn-filter" type="button" data-rel="{&quot;precall&quot;:&quot;&quot;,&quot;callback&quot;:&quot;&quot;,post:&quot;&quot;,opType:&quot;function&quot;,dataType:&quot;&quot;,target:&quot;closeConfirmDialog&quot;,confirm:&quot;&quot;,text:&quot;取消提交&quot;,size:&quot;&quot; }"> 取消提交 </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal inmodal in" style="display: none" id="failDialog" tabindex="-1" role="dialog">
+        <div class="modal-dialog">
+          <div class="modal-content animated bounceInRight family">
+            <div class="modal-header"> <span class="filter">存款失败</span>
+              <button title="取消提交" class="close" type="button" data-rel="{&quot;precall&quot;:&quot;&quot;,&quot;callback&quot;:&quot;&quot;,post:&quot;&quot;,opType:&quot;function&quot;,dataType:&quot;&quot;,target:&quot;closeConFailDialog&quot;,confirm:&quot;&quot;,text:&quot;取消提交&quot;,size:&quot;&quot; }"> <span aria-hidden="true">×</span> <span class="sr-only">关闭</span> </button>
+            </div>
+            <div class="modal-body">
+              <div class="theme-popcon">
+                <h3 class="popalign"><i class="tipbig fail"></i>存款失败</h3>
+                <div class="text">
+                  <p>失败原因：</p>
+                  <p>非常抱歉，由于数据异常，本次存款失败！建议您再存一次！</p>
+                </div>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button title="再存一次" class="btn btn-filter" type="button" data-rel="{&quot;precall&quot;:&quot;&quot;,&quot;callback&quot;:&quot;&quot;,post:&quot;&quot;,opType:&quot;function&quot;,dataType:&quot;&quot;,target:&quot;back&quot;,confirm:&quot;&quot;,text:&quot;再存一次&quot;,size:&quot;&quot; }"> 再存一次 </button>
+              <button title="联系客服" class="btn btn-outline btn-filter" type="button" data-rel="{&quot;precall&quot;:&quot;&quot;,&quot;callback&quot;:&quot;&quot;,post:&quot;&quot;,opType:&quot;function&quot;,dataType:&quot;&quot;,target:&quot;customerService&quot;,confirm:&quot;&quot;,text:&quot;联系客服&quot;,size:&quot;&quot;,&quot;url&quot;:&quot;https://chat6.livechatvalue.com/chat/chatClient/chatbox.jsp?companyID=262911&amp;configID=43611&amp;jid=3663497425&amp;s=1&quot; }"> 联系客服 </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal inmodal in" style="display: none" id="successDialog" tabindex="-1" role="dialog">
+        <div class="modal-dialog">
+          <div class="modal-content animated bounceInRight family">
+            <div class="modal-header"> <span class="filter">提交成功</span>
+              <button title="" class="close" type="button" data-rel="{&quot;precall&quot;:&quot;&quot;,&quot;callback&quot;:&quot;&quot;,post:&quot;&quot;,opType:&quot;function&quot;,dataType:&quot;&quot;,target:&quot;back&quot;,confirm:&quot;&quot;,text:&quot;&quot;,size:&quot;&quot; }"> <span aria-hidden="true">×</span> <span class="sr-only">关闭</span> </button>
+            </div>
+            <div class="modal-body">
+              <div class="theme-popcon">
+                <h3 class="popalign"><i class="tipbig fail"></i>提交成功</h3>
+                <div class="text">
+                  <p>正在等待系统处理，请注意查看钱包余额！</p>
+                </div>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button title="再存一次" class="btn btn-filter" type="button" data-rel="{&quot;precall&quot;:&quot;&quot;,&quot;callback&quot;:&quot;&quot;,post:&quot;&quot;,opType:&quot;function&quot;,dataType:&quot;&quot;,target:&quot;back&quot;,confirm:&quot;&quot;,text:&quot;再存一次&quot;,size:&quot;&quot; }"> 再存一次 </button>
+              <button title="查看资金记录" class="btn btn-outline btn-filter" type="button" data-rel="{&quot;precall&quot;:&quot;&quot;,&quot;callback&quot;:&quot;&quot;,post:&quot;&quot;,opType:&quot;function&quot;,dataType:&quot;&quot;,target:&quot;viewRecharge&quot;,confirm:&quot;&quot;,text:&quot;查看资金记录&quot;,size:&quot;&quot; }"> 查看资金记录 </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal inmodal in" style="display: none" id="manyFailures" tabindex="-1" role="dialog">
+        <input type="hidden" id="isNotThird" value="">
+        <div class="modal-dialog">
+          <div class="modal-content animated bounceInRight family">
+            <div class="modal-header"> <span class="filter">
+              <h3 class="popalign">提示</h3>
+              </span> </div>
+            <div class="modal-body">
+              <div class="theme-popcon">
+                <h3 class="popalign"><i class="tipbig fail"></i></h3>
+                <div class="text">
+                  <p>您已多次使用此存款方式且未能成功存款，为快速存款成功，建议您使用其他的存款方式或联系在线客服！</p>
+                </div>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button title="仍要继续" class="btn btn-outline btn-filter" type="button" data-rel="{&quot;precall&quot;:&quot;validateForm&quot;,&quot;callback&quot;:&quot;&quot;,post:&quot;&quot;,opType:&quot;function&quot;,dataType:&quot;&quot;,target:&quot;submit&quot;,confirm:&quot;&quot;,text:&quot;仍要继续&quot;,size:&quot;&quot; }"> 仍要继续 </button>
+              <button title="重新存款" class="btn btn-filter" type="button" data-rel="{&quot;precall&quot;:&quot;&quot;,&quot;callback&quot;:&quot;&quot;,post:&quot;&quot;,opType:&quot;function&quot;,dataType:&quot;&quot;,target:&quot;closingFailurePrompt&quot;,confirm:&quot;&quot;,text:&quot;重新存款&quot;,size:&quot;&quot; }"> 重新存款 </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal inmodal in" style="display: none" id="isLimitDialog" tabindex="-1" role="dialog">
+        <div class="modal-dialog">
+          <div class="modal-content animated bounceInRight family">
+            <div class="modal-header"> <span class="filter">提示</span>
+              <button title="" class="close" type="button" data-rel="{&quot;precall&quot;:&quot;&quot;,&quot;callback&quot;:&quot;&quot;,post:&quot;&quot;,opType:&quot;function&quot;,dataType:&quot;&quot;,target:&quot;back&quot;,confirm:&quot;&quot;,text:&quot;&quot;,size:&quot;&quot; }"> <span aria-hidden="true">×</span> <span class="sr-only">关闭</span> </button>
+            </div>
+            <div class="modal-body">
+              <div class="theme-popcon">
+                <h3 class="popalign"><i class="tipbig fail"></i>提交失败</h3>
+                <div class="text">
+                  <p style="text-align: center">存款订单提交太频繁，请稍后重新尝试！</p>
+                </div>
+              </div>
+            </div>
+            <div class="modal-footer"> <a title="取消" class="btn btn-outline btn-filter" data-rel="{&quot;precall&quot;:&quot;&quot;,&quot;callback&quot;:&quot;&quot;,post:&quot;&quot;,opType:&quot;function&quot;,dataType:&quot;&quot;,target:&quot;back&quot;,confirm:&quot;&quot;,text:&quot;取消&quot;,size:&quot;&quot; }"> 取消 </a>
+              <button title="查看资金记录" class="btn btn-outline btn-filter" type="button" data-rel="{&quot;precall&quot;:&quot;&quot;,&quot;callback&quot;:&quot;&quot;,post:&quot;&quot;,opType:&quot;function&quot;,dataType:&quot;&quot;,target:&quot;viewRecharge&quot;,confirm:&quot;&quot;,text:&quot;查看资金记录&quot;,size:&quot;&quot; }"> 查看资金记录 </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+<div class="preloader"></div>
+<div class="real-time-inform">
+  <div class="clearfix"><span class="unfold"> <i class="fa fa-angle-double-up m-r-xs pull-left"></i> <a href="javascript:;" class="unfold-z"></a> <a href="javascript:;" class="unfold-s"></a></span> </div>
+  <div class="max-ccc"> </div>
+</div>
+<script src="js/bootstrap.min.js"></script>
+</body>
+</html>

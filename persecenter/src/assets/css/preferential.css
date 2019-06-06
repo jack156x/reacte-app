@@ -1,0 +1,10 @@
+.condition { margin: 10px 15px;}
+.pull-right { float: right;}
+.input { width: 25%;}
+.clearfix { clear:both; }
+.chart-table {
+    border: 1px solid #d3d8dc;
+    border-radius: 4px;
+    margin: 10px 15px;
+    overflow-x: auto;
+}

@@ -1,0 +1,32 @@
+.tabmenu {
+    border-bottom: 1px solid #93bdee;
+    margin-top: 20px;
+    height: 40px;
+  }
+  .tabmenu ul.tab {
+    display: inline-block;
+    margin-left: 20px;
+    height: 38px;
+    position: relative;
+  }
+  .tabmenu ul.tab li {
+    display: inline-block;
+    text-align: center;
+    color: #808080;
+    font-weight: bold;
+    font-size: 15px;
+    height: 38px;
+    line-height: 38px;
+    margin-right: 5px;
+  }
+  .tabmenu ul.tab li a {
+    height: 38px;
+    display: block;
+    padding: 0 15px 0 15px;
+    text-align: center;
+    border: 1px solid #dbe3ef;
+    border-bottom: 0 solid #fff;
+    background: #fff;
+    color: #808080;
+    position: relative;
+  }

@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>资金记录</title>
+<meta charset="utf-8" />
+<meta name="keywords" content="keywords"/>
+<meta name="description" content="description"/>
+<meta name="author" content="author" />
+<meta name="Copyright" content="author" />
+<meta name="viewport" content="width=device-width"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<link rel="shortcut icon" href="/images/favicon.png"/>
+<link rel="apple-touch-icon" href="images/touchicon.png"/>
+<link rel="stylesheet" type="text/css" href="css/bootstrap-dialog.css"/>
+<link rel="stylesheet" type="text/css" href="css/font-awesome.css"/>
+<link rel="stylesheet" type="text/css" href="css/public-mod.css"/>
+<link rel="stylesheet" type="text/css" href="css/login.css"/>
+<link rel="stylesheet" type="text/css" href="css/bootstrap.css"/>
+<link rel="stylesheet" type="text/css" href="css/pcenter-style.css"/>
+<link rel="stylesheet" type="text/css" href="css/base.css"/>
+<link rel="stylesheet" type="text/css" href="css/zh_CN.css"/>
+<link rel="icon" type="image/png" href="images/favicon.png" sizes="32x32">
+<script type="text/javascript" src="js/message_zh_CN.js"></script>
+<script type="text/javascript" src="js/jquery1.91.min.js"></script>
+<script type="text/javascript" src="js/jquery.plugs.js"></script>
+<script type="text/javascript" src="js/js.js"></script>
+</head>
+<body>
+
+<!--头部-->
+<div class="top-wrap">
+  <div class="top-top"> 
+    <!--顶部右边-->
+    <div class="top-right">
+      <div class="member">
+        <div id="site-nav">
+          <ul>
+            <li>
+              <div class="menu"> <a class="menu-hd" href="javascript:;"> <span class="orange" id="ofullname"> linda</span> <b></b> </a>
+                <div class="menu-bd box">
+                  <div class="global-account-head"> <a href="javaScript:;" class="global-account-img"> </a>
+                    <p class="global-account-name" title="name"> <span  class="_hours"></span> </p>
+                    <a class="accountSet" href="personInfo.html">个人资料</a> <span class="global-top-seperator">|</span> <a class="transactionRecords" href="gameOrder.html">投注记录</a> </div>
+                  <div class="global-account-money"> 总资产: <a href="javascript:;" class="show-remaining btn btn-filter btn-xs real-time-btn show-remaining">显示金额</a> <span class="hide-astrict"> <em class="total-money astrict"> </em> <i class="ico-ask showsmall refresh"></i> </span>
+                    <p class="dottline space"></p>
+                    <div class="total"> <a name="recharge" href="recharge.html">存款</a> <span class="global-top-seperator">|</span> <a name="withdraws" href="withdrawList.html">取款</a> </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <a href="/pcenter/passport/logout.html" target="_top" class="logout">[退出]</a>
+        <label id="playerUnread">
+        <label class="line-after info-down-btn"> <span class="new"> <i class="new-ico select"></i> <a href="javascript:void(0)">新消息</a> </span> </label>
+        </label>
+      </div>
+    </div>
+    <!--顶部左边-->
+    <div class="top-left">
+      <div class="select-lang" id="divLanguage">
+        <p><span class="flag zh"></span>简体中文</p>
+        <ul style="display: none;">
+          <li><a href="javascript:void(0)" change="language" lang="zh" country="CN" rel="zh"><span class="flag zh"></span>简体中文</a></li>
+        </ul>
+      </div>
+      <label class="time line-after"> <span id="userTime">GMT+08:00</span> <span id="index-clock" class="nav-shadow clock-show"> </span> </label>
+    </div>
+  </div>
+</div>
+<!--banner-->
+<div class="banner"  > <a href="/">
+  <div class="logo"><img src="images/1540967008245.png_220x90.png"></div>
+  </a>
+  <div class="right">
+    <ul class="nav-menu">
+      <li> <a class="nav-menu-ico aip-type-home-ico" href="/"> <span>网站首页</span> </a> </li>
+      <li> <a class="nav-menu-ico aip-type-5-ico" href="/commonPage/gamePage/loading.html?apiId=34&apiTypeId=5"> <span>棋牌</span> </a> </li>
+      <li> <a class="nav-menu-ico aip-type-2-ico" href="/casino.html?apiType=2&apiId="> <span>电子游艺</span> </a> </li>
+      <li> <a class="nav-menu-ico aip-type-1-ico" href="/live.html"> <span>真人视讯</span> </a> </li>
+      <li> <a class="nav-menu-ico aip-type-promo-ico" href="/promo.html"> <span>优惠活动</span> </a> </li>
+    </ul>
+  </div>
+  <div class="banner-bg-t"></div>
+  <div class="banner-bg"> <img src="images/bannerbg.jpg"> </div>
+</div>
+<div id="page-content" class="wrapper" style="min-height: 800px;"> 
+  <!--left-->
+  <div class="sidebar"> 
+    <!--左边菜单栏-->
+    <div class="sidebar-nav _nav_title">
+      <div class="left-nav-title">财务中心</div>
+      <dl>
+        <dt class=""> <a  nav-target='mainFrame'
+                                                    data="/fund/playerTransfer/transfers.html?t=930824"  href="transfers.html"> <i class="navico home"></i> 额度转换</a> </dt>
+      </dl>
+      <dl>
+        <dt class=""> <a  nav-target='mainFrame'
+                                                    data="recharge.html?t=930824"  href="recharge.html"> <i class="navico deposit"></i> 存款专区</a> </dt>
+      </dl>
+      <dl>
+        <dt class=""> <a  nav-target='mainFrame'
+                                                    data="/player/withdraw/withdrawList.html?t=930824"  href="withdrawList.html"> <i class="navico withdraw"></i> 取款专区</a> </dt>
+      </dl>
+      <dl>
+        <dt class="select"> <a  nav-target='mainFrame'
+                                                    data="/fund/transaction/list.html?t=930824"  href="list.html"> <i class="navico capital"></i> 资金记录</a> </dt>
+      </dl>
+      <dl>
+        <dt class=""> <a  nav-target='mainFrame'
+                                                    data="/gameOrder/index.html?t=930824"  href="gameOrder.html"> <i class="navico gamerecord"></i> 投注记录</a> </dt>
+      </dl>
+      <dl>
+        <dt class=""> <a  nav-target='mainFrame'
+                                                    data="/preferential/list.html?t=930824"  href="preferential.html"> <i class="navico sale"></i> 优惠记录</a> </dt>
+      </dl>
+      <div class="left-nav-title">个人中心</div>
+      <dl>
+        <dt class=""> <a  nav-target='mainFrame'
+                                                    data="gameNotice.html?t=930824"  href="gameNotice.html"> <i class="navico info"></i> 消息公告</a> </dt>
+      </dl>
+      <dl>
+        <dt class=""> <a  nav-target='mainFrame'
+                                                    data="/personInfo/index.html?t=930824"  href="personInfo.html"> <i class="navico accout"></i> 个人资料</a> </dt>
+      </dl>
+      <dl>
+        <dt class=""> <a  nav-target='mainFrame'
+                                                    data="/playerRecommendAward/recommendBonus.html?t=930824"  href="recommendBonus.html"> <i class="navico recommend"></i> 全民推广</a> </dt>
+      </dl>
+      <dl>
+        <dt class=""> <a  nav-target='mainFrame'
+                                                    data="/personInfo/password/index.html?t=930824"  href="password.html"> <i class="navico recommend"></i> 修改密码</a> </dt>
+      </dl>
+    </div>
+  </div>
+  <!--right-->
+  <div id="mainFrame" class="main-wrap">
+    <div>
+      <div class="notice">
+        <div class="notice-left"><em class="path"></em></div>
+        <div class="path-right"><a class="cursor">资金记录</a></div>
+      </div>
+      <!--选项卡-->
+      <div class="tabmenu">
+        <ul class="tab">
+          <li><a href="javascript:void(0)" class="current">列表模式</a></li>
+          <li><a nav-target="mainFrame" href="chart.html">图表模式</a></li>
+        </ul>
+      </div>
+      
+      <!--列表模式-->
+      <form id="command" action="/pcenter/fund/transaction/list.html" method="post">
+        <div class="rgeechar">
+          <div class="allactice clearfix"> <a data-toggle="button" class="ud-condition pull-right">更多条件<i class="fa fa-angle-double-down m-r-sm"></i></a> <span class="pull-right al-left"> <span class="ud-condition pull-right">近7天</span> </span> </div>
+          <div class="history sh-condition m-t-xs" style="display: none;">
+            <input type="hidden" value=" [&quot;deposit&quot;,&quot;transfers&quot;,&quot;withdrawals&quot;]" id="all">
+            <input type="hidden" value="{&quot;deposit&quot;:[&quot;pending&quot;,&quot;success&quot;,&quot;failure&quot;,&quot;pending_pay&quot;,&quot;over_time&quot;],&quot;recommend&quot;:[&quot;lssuing&quot;],&quot;favorable&quot;:[&quot;success&quot;],&quot;transfers&quot;:[&quot;process&quot;,&quot;success&quot;,&quot;failure&quot;],&quot;backwater&quot;:[&quot;lssuing&quot;],&quot;withdrawals&quot;:[&quot;process&quot;,&quot;success&quot;,&quot;failure&quot;,&quot;reject&quot;]}" id="status4Type">
+            <input type="hidden" value="" name="search.transactionTypes" id="transactionTypes">
+            <input type="hidden" value="" name="search.transactionType">
+            <input type="hidden" value="" name="search.status">
+            <div class="capital transactionType_type" data-selector="[name='search.transactionType']"><span>类型：</span> <a title="" class="_" data-rel="{&quot;precall&quot;:&quot;&quot;,&quot;callback&quot;:&quot;&quot;,post:&quot;&quot;,opType:&quot;function&quot;,dataType:&quot;&quot;,target:&quot;changeType&quot;,confirm:&quot;&quot;,text:&quot;&quot;,size:&quot;&quot; }"> <span>全部</span> </a> <a title="" class="_deposit" data-rel="{&quot;precall&quot;:&quot;&quot;,&quot;callback&quot;:&quot;&quot;,post:&quot;deposit&quot;,opType:&quot;function&quot;,dataType:&quot;&quot;,target:&quot;changeType&quot;,confirm:&quot;&quot;,text:&quot;&quot;,size:&quot;&quot; }"> <span>存款</span> </a> <a title="" class="_withdrawals" data-rel="{&quot;precall&quot;:&quot;&quot;,&quot;callback&quot;:&quot;&quot;,post:&quot;withdrawals&quot;,opType:&quot;function&quot;,dataType:&quot;&quot;,target:&quot;changeType&quot;,confirm:&quot;&quot;,text:&quot;&quot;,size:&quot;&quot; }"> <span>取款</span> </a> <a title="" class="_transfers" data-rel="{&quot;precall&quot;:&quot;&quot;,&quot;callback&quot;:&quot;&quot;,post:&quot;transfers&quot;,opType:&quot;function&quot;,dataType:&quot;&quot;,target:&quot;changeType&quot;,confirm:&quot;&quot;,text:&quot;&quot;,size:&quot;&quot; }"> <span>转账</span> </a> <a title="" class="_favorable" data-rel="{&quot;precall&quot;:&quot;&quot;,&quot;callback&quot;:&quot;&quot;,post:&quot;favorable&quot;,opType:&quot;function&quot;,dataType:&quot;&quot;,target:&quot;changeType&quot;,confirm:&quot;&quot;,text:&quot;&quot;,size:&quot;&quot; }"> <span>优惠</span> </a> <a title="" class="_backwater" data-rel="{&quot;precall&quot;:&quot;&quot;,&quot;callback&quot;:&quot;&quot;,post:&quot;backwater&quot;,opType:&quot;function&quot;,dataType:&quot;&quot;,target:&quot;changeType&quot;,confirm:&quot;&quot;,text:&quot;&quot;,size:&quot;&quot; }"> <span>返水</span> </a> <a title="" class="_recommend" data-rel="{&quot;precall&quot;:&quot;&quot;,&quot;callback&quot;:&quot;&quot;,post:&quot;recommend&quot;,opType:&quot;function&quot;,dataType:&quot;&quot;,target:&quot;changeType&quot;,confirm:&quot;&quot;,text:&quot;&quot;,size:&quot;&quot; }"> <span>推荐</span> </a> </div>
+            <div class="capital transactionType_status" data-selector="[name='search.status']"><span>状态：</span> <a title="" class="_ status_all" data-rel="{&quot;precall&quot;:&quot;&quot;,&quot;callback&quot;:&quot;&quot;,post:&quot;&quot;,opType:&quot;function&quot;,dataType:&quot;&quot;,target:&quot;changeSearchValue&quot;,confirm:&quot;&quot;,text:&quot;&quot;,size:&quot;&quot; }"> <span> 全部</span> </a> <a title="" class="_pending" data-rel="{&quot;precall&quot;:&quot;&quot;,&quot;callback&quot;:&quot;&quot;,post:&quot;pending&quot;,opType:&quot;function&quot;,dataType:&quot;&quot;,target:&quot;changeSearchValue&quot;,confirm:&quot;&quot;,text:&quot;&quot;,size:&quot;&quot; }"> 待处理 </a> <a title="" class="_process" data-rel="{&quot;precall&quot;:&quot;&quot;,&quot;callback&quot;:&quot;&quot;,post:&quot;process&quot;,opType:&quot;function&quot;,dataType:&quot;&quot;,target:&quot;changeSearchValue&quot;,confirm:&quot;&quot;,text:&quot;&quot;,size:&quot;&quot; }"> 处理中 </a> <a title="" class="_success" data-rel="{&quot;precall&quot;:&quot;&quot;,&quot;callback&quot;:&quot;&quot;,post:&quot;success&quot;,opType:&quot;function&quot;,dataType:&quot;&quot;,target:&quot;changeSearchValue&quot;,confirm:&quot;&quot;,text:&quot;&quot;,size:&quot;&quot; }"> 成功 </a> <a title="" class="_failure" data-rel="{&quot;precall&quot;:&quot;&quot;,&quot;callback&quot;:&quot;&quot;,post:&quot;failure&quot;,opType:&quot;function&quot;,dataType:&quot;&quot;,target:&quot;changeSearchValue&quot;,confirm:&quot;&quot;,text:&quot;&quot;,size:&quot;&quot; }"> 失败 </a> <a title="" class="_reject" data-rel="{&quot;precall&quot;:&quot;&quot;,&quot;callback&quot;:&quot;&quot;,post:&quot;reject&quot;,opType:&quot;function&quot;,dataType:&quot;&quot;,target:&quot;changeSearchValue&quot;,confirm:&quot;&quot;,text:&quot;&quot;,size:&quot;&quot; }"> 拒绝 </a> <a title="" class="_lssuing" data-rel="{&quot;precall&quot;:&quot;&quot;,&quot;callback&quot;:&quot;&quot;,post:&quot;lssuing&quot;,opType:&quot;function&quot;,dataType:&quot;&quot;,target:&quot;changeSearchValue&quot;,confirm:&quot;&quot;,text:&quot;&quot;,size:&quot;&quot; }"> 已发放 </a> <a title="" class="_pending_pay" data-rel="{&quot;precall&quot;:&quot;&quot;,&quot;callback&quot;:&quot;&quot;,post:&quot;pending_pay&quot;,opType:&quot;function&quot;,dataType:&quot;&quot;,target:&quot;changeSearchValue&quot;,confirm:&quot;&quot;,text:&quot;&quot;,size:&quot;&quot; }"> 待支付 </a> </div>
+            <div class="btnalign"> <span class="pull-left">时间范围：</span>
+              <div class="btn-group daterangepickers" style="width:100px;">
+                <input class="form-control" type="text" id="" name="search.beginCreateTime" style="width:80px;padding-left: 20px;padding-right: 2px;" value="2019-04-09" data-rel="{showDropdowns:false,callback:'',useRange:true,
+                     useToday:true,format:'yyyy-MM-dd',
+                     minDate:'2019-03-16',maxDate:'',
+                     startDate:'2019-04-09',endDate:'2019-04-15',
+                     btnClass:'',drops:'down',opens:'right',startName:'search.beginCreateTime',endName:'search.endCreateTime',
+                     today:true,
+                     yesterday:true,
+                     beforeYesterday:true,
+                     thisWeek:true,
+                     lastWeek:true,
+                     thisMonth:true,
+                     lastMonth:false,
+                     last7Days:true,
+                     last30Days:true}">
+                <i class="input-group-addon glyphicon glyphicon-calendar fa fa-calendar" style="left: 1px;position: absolute;top: 5px;z-index:3;border: 0px;padding-left: 2px;"></i> </div>
+              ~
+              <div class="btn-group daterangepickers" style="width:100px;">
+                <input class="form-control" type="text" id="" name="search.endCreateTime" style="width:80px;padding-left: 20px;padding-right: 2px;" value="2019-04-15" data-rel="{showDropdowns:false,callback:'',useRange:true,
+                     useToday:true,format:'yyyy-MM-dd',
+                     minDate:'2019-03-16',maxDate:'',
+                     startDate:'2019-04-09',endDate:'2019-04-15',
+                     btnClass:'',drops:'down',opens:'right',startName:'search.beginCreateTime',endName:'search.endCreateTime',
+                     today:true,
+                     yesterday:true,
+                     beforeYesterday:true,
+                     thisWeek:true,
+                     lastWeek:true,
+                     thisMonth:true,
+                     lastMonth:false,
+                     last7Days:true,
+                     last30Days:true}">
+                <i class="input-group-addon glyphicon glyphicon-calendar fa fa-calendar" style="left: 1px;position: absolute;top: 5px;z-index:3;border: 0px;padding-left: 2px;"></i> </div>
+              <button type="button" class="btn daterangepickers" style="padding: 6px 3px;" 　endname="search.endCreateTime">快选</button>
+              <div class="pull-right">
+                <input type="text" id="input" placeholder="交易号" class="form-control search" name="search.transactionNo" value="">
+                <button title="" class="btn btn-filter" type="button" data-rel="{&quot;precall&quot;:&quot;&quot;,&quot;callback&quot;:&quot;&quot;,post:&quot;&quot;,opType:&quot;function&quot;,dataType:&quot;&quot;,target:&quot;query&quot;,confirm:&quot;&quot;,text:&quot;&quot;,size:&quot;&quot; }"> <i class="fa fa-search"></i> <span class="hd">&nbsp;</span> </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="search-list-container">
+          <div class="chart-table">
+            <table class="table table-striped table-hover dataTable" width="100%" border="0" cellpadding="0" cellspacing="0">
+              <thead>
+                <tr>
+                  <th width="20%">交易号</th>
+                  <th width="15%">创建时间</th>
+                  <th width="24%" data-selector=".transactionType_type" data-name="search.transactionType"> <select class="" name="" initprompt="全部类型" callback="query">
+                      <option value="">全部类型</option>
+                      <option value="deposit">存款</option>
+                      <option value="withdrawals">取款</option>
+                      <option value="transfers">转账</option>
+                      <option value="favorable">优惠</option>
+                      <option value="backwater">返水</option>
+                      <option value="recommend">推荐</option>
+                    </select></th>
+                  <th width="12%">金额</th>
+                  <th width="13%">账户余额</th>
+                  <th width="9%" data-selector=".transactionType_status" data-name="search.status" style="padding-left: 0"> <select class="" name="" initprompt="全部状态" callback="query">
+                      <option value="">全部状态</option>
+                      <option value="pending">待处理</option>
+                      <option value="process">处理中</option>
+                      <option value="success">成功</option>
+                      <option value="failure">失败</option>
+                      <option value="reject">拒绝</option>
+                      <option value="lssuing">已发放</option>
+                      <option value="pending_pay">待支付</option>
+                    </select></th>
+                  <th width="8%">操作</th>
+                </tr>
+              </thead>
+              <thead>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>T190417D5N701693201</td>
+                  <td>2019-04-17 16:33</td>
+                  <td> 存款-首存<br>
+                    支付宝扫码支付</td>
+                  <td><span class="green">+10.00</span></td>
+                  <td>0.00</td>
+                  <td style="padding-left: 0"><span class="orange">待支付</span></td>
+                  <td><a title="存款详细" class=""  data-target="#view" data-toggle="modal" href="javascript:void(0);"> 详细 </a></td>
+                </tr>
+                <tr>
+                  <td>T190415D5N701684601</td>
+                  <td>2019-04-15 19:34</td>
+                  <td> 存款-首存<br>
+                    支付宝扫码支付</td>
+                  <td><span class="green">+100.00</span></td>
+                  <td>0.00</td>
+                  <td style="padding-left: 0"><span class="gary">失败</span></td>
+                  <td><a title="存款详细" class="" data-target="#view" data-toggle="modal" href="javascript:void(0);"> 详细 </a></td>
+                </tr>
+                <tr>
+                  <td>T190415D5N701684502</td>
+                  <td>2019-04-15 19:27</td>
+                  <td> 存款-首存<br>
+                    银联快捷</td>
+                  <td><span class="green">+100.00</span></td>
+                  <td>0.00</td>
+                  <td style="padding-left: 0"><span class="gary">失败</span></td>
+                  <td><a title="存款详细" class="" data-target="#view" data-toggle="modal" href="javascript:void(0);"> 详细 </a></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="row bdtop3 row bdtop3">
+            <input type="hidden" name="paging.pageNumber" value="1">
+            <input type="hidden" name="paging.prePage" value="1">
+            <input type="hidden" name="paging.nextPage" value="1">
+            <input type="hidden" name="paging.firstPageNumber" value="1">
+            <input type="hidden" name="paging.lastPageNumber" value="1">
+            <input type="hidden" name="paging.totalCount" value="0">
+            <div class="col-sm-3">
+              <div aria-relevant="all" aria-live="polite" role="alert" id="editable_info" class="dataTables_info pull-left">
+                <ul class="pagination-pages">
+                  <li tabindex="0" aria-controls="editable" class="paginate_button "><span>每页显示</span></li>
+                </ul>
+              </div>
+              <div class="pull-left">
+                <select name="paging.pageSize" tabindex="-1" class="btn-group chosen-select-no-single dropup" style="width: 60px;" data-placeholder="20条">
+                  <option value="10">10条</option>
+                  <option selected="selected" value="20">20条</option>
+                  <option value="30">30条</option>
+                  <option value="50">50条</option>
+                  <option value="100">100条</option>
+                  <option value="200">200条</option>
+                </select>
+                <span class="m-l-sm">共0条</span> </div>
+            </div>
+            <div class="col-sm-9">
+              <div id="editable_paginate" class="dataTables_paginate paging_simple_numbers">
+                <div class="pull-right pages show-hide-1095 page-skip form-inline">
+                  <input name="paging.pageNumberText" type="text" value="1" class="m-l-xs m-r-xs min form-control input-sm">
+                  页
+                  <button type="button" class="btn btn-sm m-l-sm">跳转</button>
+                </div>
+                <ul class="pagination pull-right">
+                  <li aria-controls="editable" class="paginate_button previous show-hide-768 disabled"><a name="paging.firstPageNumber" href="javascript:void(0);">首页</a></li>
+                  <li aria-controls="editable" class="paginate_button previous disabled"><a name="paging.prePage" href="javascript:void(0);">上一页</a></li>
+                  <li class="paginate_button show-hide-768 current disabled"><a name="paging.Page" href="javascript:void(0)" data-page="0">1</a></li>
+                  <li aria-controls="editable" class="paginate_button next disabled"><a name="paging.nextPage" href="javascript:void(0);">下一页</a></li>
+                  <li aria-controls="editable" class="paginate_button next show-hide-768 disabled"><a name="paging.lastPageNumber" href="javascript:void(0);">尾页</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+    <div class="daterangepicker dropdown-menu show-calendar opensright">
+      <div class="calendar left">
+        <div class="daterangepicker_input">
+          <div class="calendar-time" style="display: none;">
+            <div></div>
+            <i class="fa fa-clock-o glyphicon glyphicon-time"></i></div>
+        </div>
+        <div class="calendar-table"></div>
+      </div>
+      <div class="ranges" style="display: none;">
+        <div class="range_inputs">
+          <button class="applyBtn btn btn-sm btn-success" disabled="disabled" type="button">确定</button>
+          <button class="cancelBtn btn btn-sm btn-default" type="button">取消</button>
+        </div>
+      </div>
+    </div>
+    <div class="daterangepicker dropdown-menu opensright">
+      <div class="calendar left" style="display: none;">
+        <div class="daterangepicker_input">
+          <div class="calendar-time" style="display: none;">
+            <div></div>
+            <i class="fa fa-clock-o glyphicon glyphicon-time"></i></div>
+        </div>
+        <div class="calendar-table"></div>
+      </div>
+      <div class="ranges">
+        <ul>
+          <li>今天</li>
+          <li>昨天</li>
+          <li>前天</li>
+          <li>本周</li>
+          <li>上周</li>
+          <li>本月</li>
+          <li>最近7天</li>
+          <li>最近30天</li>
+        </ul>
+        <div class="range_inputs">
+          <button class="applyBtn hide btn btn-sm btn-success" disabled="disabled" type="button">确定</button>
+          <button class="cancelBtn hide btn btn-sm btn-default" type="button">取消</button>
+        </div>
+      </div>
+    </div>
+    <div class="daterangepicker dropdown-menu show-calendar opensright">
+      <div class="calendar left">
+        <div class="daterangepicker_input">
+          <div class="calendar-time" style="display: none;">
+            <div></div>
+            <i class="fa fa-clock-o glyphicon glyphicon-time"></i></div>
+        </div>
+        <div class="calendar-table"></div>
+      </div>
+      <div class="ranges" style="display: none;">
+        <div class="range_inputs">
+          <button class="applyBtn btn btn-sm btn-success" disabled="disabled" type="button">确定</button>
+          <button class="cancelBtn btn btn-sm btn-default" type="button">取消</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="preloader"></div>
+<div class="real-time-inform">
+  <div class="clearfix"><span class="unfold"> <i class="fa fa-angle-double-up m-r-xs pull-left"></i> <a href="javascript:;" class="unfold-z"></a> <a href="javascript:;" class="unfold-s"></a></span> </div>
+  <div class="max-ccc"> </div>
+</div>
+
+<!--详细弹窗开始-->
+<div class="modal bootstrap-dialog jp-open-dialog-700 type-primary fade size-normal" id="view" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document"> 
+        
+    <div class="modal-content">
+      <div class="modal-header bootstrap-dialog-draggable">
+        <div class="bootstrap-dialog-header">
+          <div class="bootstrap-dialog-close-button" style="display: block;">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"> <span aria-hidden="true">×</span> </button>
+          </div>
+          <div class="bootstrap-dialog-title" id="view">存款详细</div>
+        </div>
+      </div>
+      <div class="modal-body">
+        <div class="bootstrap-dialog-body">
+          <div class="bootstrap-dialog-message">
+            <iframe frameborder="0" scrolling="no" width="100%" style="overflow: visible; height: 353px;" src="view.html"></iframe>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer" style="display: none;">
+        <div class="bootstrap-dialog-footer"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!--详细弹窗结束-->
+<script src="js/bootstrap.min.js"></script>
+
+</body>
+</html>

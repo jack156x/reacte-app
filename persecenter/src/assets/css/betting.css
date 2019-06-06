@@ -1,0 +1,46 @@
+.history {
+    border: 1px solid #d3d8dc;
+    background: #f7f8f9;
+    border-radius: 4px;
+    padding: 10px 20px;
+    line-height: 30px;
+    margin: 10px 15px;
+    text-align: left;
+  }
+  .block-pagination {
+    margin: 10px 15px;
+    width: 100%;
+  }
+  .block {
+    width: 76.5%;
+    float: left;
+  }
+  .count {
+      margin: 20px 15px;
+  }
+  .record-total { 
+      margin: 15px;
+      background: #fbf3e5;
+      border: 1px solid #ffe1b4;
+      border-radius: 2px;
+      padding: 10px;
+  }
+  .recordCount {
+      color: red;
+      margin-right: 5px;
+  }
+  .pull-right {
+    float: right;
+  }
+  .pull-left {
+      float: left;
+  }
+  .clearfix {
+    clear: both;
+  }
+  .chart-table {
+    border: 1px solid #d3d8dc;
+    border-radius: 4px;
+    margin: 10px 15px;
+    overflow-x: auto;
+  }

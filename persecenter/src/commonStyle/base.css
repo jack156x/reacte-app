@@ -1,0 +1,190 @@
+body {
+	font-family: "Microsoft YaHei", "Segoe UI", "Lucida Grande", Helvetica, Arial, FreeSans, Arimo, "Droid Sans", "wenquanyi micro hei", "Hiragino Sans GB", "Hiragino Sans GB W3", Arial, sans-serif;
+	font-size: 14px;
+	-webkit-font-smoothing: antialiased;
+	line-height: 1.42857143;
+	color: #666;
+	background: url("../assets/images/index-bg.png")
+}
+.fs1 {
+	font-size: 41px
+}
+tr.gr-wrap td {
+	padding: 10px
+}
+tr.gr-wrap .gr {
+	vertical-align: middle
+}
+tr.gr-wrap em.gr {
+	margin-right: 5px
+}
+*:focus {
+	outline: 0!important
+}
+html, body, h1, h2, h3, h4, h5, h6, div, dl, dt, dd, ul, ol, li, p, blockquote, pre, hr, figure, table, caption, th, td, form, select, fieldset, legend, input, button, textarea, menu, th, td, input, div {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	vertical-align: baseline
+}
+em, i {
+	font-style: normal
+}
+a {
+	color: #333;
+	text-decoration: none;
+	cursor: pointer
+}
+a:hover, a:focus {
+	color: #f89c2c;
+	text-decoration: none
+}
+ol, ul, li {
+	list-style: none
+}
+img {
+	border: 0
+}
+div, p {
+	word-break: break-all
+}
+.line-hi17 {
+	line-height: 17px
+}
+.line-hi30 {
+	line-height: 30px
+}
+.line-hi32 {
+	line-height: 32px
+}
+.line-hi34 {
+	line-height: 34px
+}
+.line-hi42 {
+	line-height: 42px
+}
+.line-after {
+	background: url("../assets/images/line01.png") 0 0 no-repeat;
+	display: inline-block;
+	height: 32px;
+	line-height: 32px;
+	margin-left: 5px;
+	margin-right: 5px
+}
+.btn-orange {
+	background: #f89c2c;
+	color: #fff
+}
+.btn-orange:hover {
+	background: #ffa63b
+}
+.btn-green {
+	background: #0bbf60;
+	color: #fff;
+	border: 1px solid #0bbf60
+}
+.btn-green-bor {
+	border: 1px solid #0bbf60;
+	background: #fff;
+	color: #18b160
+}
+.btn-green-bor:hover, .btn-green:hover {
+	background: #10c766!important;
+	border: 1px solid #0bbf60!important
+}
+.btn-blue {
+	background: #2772ee!important;
+	color: #fff!important;
+	border: 1px solid #2772ee!important
+}
+.btn-blue:hover {
+	background: #3b84fb!important
+}
+.btn-blue-bor {
+	border: 1px solid #2772ee;
+	background: #fff;
+	color: #2772ee
+}
+.btn-blue a {
+	color: #fff
+}
+.btn-blue.disabled, .btn-blue.disabled:hover, .btn-blue.disabled:focus, .btn-blue.disabled:active, .btn-blue.disabled.active, .btn-blue[disabled], .btn-blue[disabled]:hover, .btn-blue[disabled]:focus, .btn-blue[disabled]:active, .btn-blue.active[disabled], fieldset[disabled] .btn-blue, fieldset[disabled] .btn-blue:hover, fieldset[disabled] .btn-blue:focus, fieldset[disabled] .btn-blue:active, fieldset[disabled] .btn-blue.active {
+	background-color: #ccc!important;
+	border-color: #ccc!important
+}
+.btn-gray {
+	background: #fff;
+	color: #666;
+	border: 1px solid #d0d0d0
+}
+.btn-bggray, .btn-bggray:hover {
+	background: #a9a9a9;
+	color: #fff;
+	border: 1px solid #a9a9a9;
+	cursor: pointer
+}
+.btn-drakgray {
+	background: #999;
+	color: #fff;
+	border: 1px solid #999
+}
+.btn-drakgray:hover, .btn-drakgray-bor:hover {
+	background: #a5a5a5!important;
+	border: 1px solid #a5a5a5!important
+}
+.btn-drakgray-bor {
+	border: 1px solid #999;
+	background: #fff;
+	color: #999
+}
+.btn-white {
+	background: #fff;
+	color: #999
+}
+.btn-white:hover {
+	color: #666
+}
+.button {
+	cursor: pointer
+}
+.btn-auto {
+	padding-left: 10px;
+	padding-right: 10px;
+	height: 35px;
+	border-radius: 3px;
+	text-align: center;
+	font-family: "Microsoft YaHei"
+}
+.line-after span.new .ci-count {
+	margin: 7px 0 0 5px
+}
+.top-right>.member>label>.t-text, .top-right>.member>label>.t-password {
+	float: left;
+	height: 26px;
+	border: 0;
+	margin-top: 3px;
+	width: 130px;
+	font-size: 12px;
+	padding-right: 45px
+}
+.clearfix:after, .row:after, .control-group:after {
+    clear: both;
+}
+.clearfix:before, .clearfix:after, .row:before, .row:after, .control-group:before, .control-group:after {
+    display: table;
+    content: " ";
+}
+.saleactive .item:after, .main-wrap:after, .banner .right:after, .safe:after, .game:after, .saletotal .content:after, .message li:after, .user-info:after, .invite-copy:after, .clear:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+    overflow: hidden;
+    line-height: 0;
+}
+a {
+    color: #2772ee;
+}

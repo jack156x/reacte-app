@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <title>首页 - 玩家中心 - 大众棋牌</title>
+    <meta charset="utf-8" />
+    <meta name="keywords" content="keywords"/>
+    <meta name="description" content="description"/>
+    <meta name="author" content="author" />
+    <meta name="Copyright" content="author" />
+    <meta name="viewport" content="width=device-width"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <link rel="shortcut icon" href="/images/favicon.png"/>
+    <link rel="apple-touch-icon" href="images/touchicon.png"/>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap-dialog.css"/>
+    <link rel="stylesheet" type="text/css" href="css/font-awesome.css"/>
+    <link rel="stylesheet" type="text/css" href="css/public-mod.css"/>
+    <link rel="stylesheet" type="text/css" href="css/login.css"/>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css"/>
+    <link rel="stylesheet" type="text/css" href="css/pcenter-style.css"/>
+    <link rel="stylesheet" type="text/css" href="css/base.css"/>
+    <link rel="stylesheet" type="text/css" href="css/zh_CN.css"/>
+    <link rel="icon" type="image/png" href="images/favicon.png" sizes="32x32">
+    <script type="text/javascript" src="js/message_zh_CN.js"></script>
+    <script type="text/javascript" src="js/jquery1.91.min.js"></script>
+    <script type="text/javascript" src="js/jquery.plugs.js"></script>
+    <script type="text/javascript" src="js/js.js"></script>
+ 
+ 
+    </head>
+    <body>
+ 
+<!--头部-->
+<div class="top-wrap">
+      <div class="top-top"> 
+    <!--顶部右边-->
+    <div class="top-right">
+          <div class="member">
+        <div id="site-nav">
+              <ul>
+            <li>
+                  <div class="menu"> <a class="menu-hd" href="javascript:;"> <span class="orange" id="ofullname"> linda</span> <b></b> </a>
+                <div class="menu-bd box">
+                      <div class="global-account-head"> <a href="javaScript:;" class="global-account-img"> </a>
+                    <p class="global-account-name" title="name"> <span  class="_hours"></span> </p>
+                    <a class="accountSet" href="personInfo.html">个人资料</a> <span class="global-top-seperator">|</span> <a class="transactionRecords" href="gameOrder.html">投注记录</a> </div>
+                      <div class="global-account-money"> 总资产: <a href="javascript:;" class="show-remaining btn btn-filter btn-xs real-time-btn show-remaining">显示金额</a> <span class="hide-astrict"> <em class="total-money astrict"> </em> <i class="ico-ask showsmall refresh"></i> </span>
+                    <p class="dottline space"></p>
+                    <div class="total"> <a name="recharge" href="recharge.html">存款</a> <span class="global-top-seperator">|</span> <a name="withdraws" href="withdrawList.html">取款</a> </div>
+                  </div>
+                    </div>
+              </div>
+                </li>
+          </ul>
+            </div>
+        <a href="/pcenter/passport/logout.html" target="_top" class="logout">[退出]</a>
+        <label id="playerUnread">
+        <label class="line-after info-down-btn"> <span class="new"> <i class="new-ico select"></i> <a href="javascript:void(0)">新消息</a> </span> </label>
+        </label>
+      </div>
+        </div>
+    <!--顶部左边-->
+    <div class="top-left">
+          <div class="select-lang" id="divLanguage">
+        <p><span class="flag zh"></span>简体中文</p>
+        <ul style="display: none;">
+              <li><a href="javascript:void(0)" change="language" lang="zh" country="CN" rel="zh"><span class="flag zh"></span>简体中文</a></li>
+            </ul>
+      </div>
+          <label class="time line-after"> <span id="userTime">GMT+08:00</span> <span id="index-clock" class="nav-shadow clock-show"> </span> </label>
+        </div>
+  </div>
+    </div>
+<!--banner-->
+<div class="banner"  > <a href="/">
+  <div class="logo"><img src="images/1540967008245.png_220x90.png"></div>
+  </a>
+      <div class="right">
+    <ul class="nav-menu">
+          <li> <a class="nav-menu-ico aip-type-home-ico" href="/"> <span>网站首页</span> </a> </li>
+          <li> <a class="nav-menu-ico aip-type-5-ico" href="/commonPage/gamePage/loading.html?apiId=34&apiTypeId=5"> <span>棋牌</span> </a> </li>
+          <li> <a class="nav-menu-ico aip-type-2-ico" href="/casino.html?apiType=2&apiId="> <span>电子游艺</span> </a> </li>
+          <li> <a class="nav-menu-ico aip-type-1-ico" href="/live.html"> <span>真人视讯</span> </a> </li>
+          <li> <a class="nav-menu-ico aip-type-promo-ico" href="/promo.html"> <span>优惠活动</span> </a> </li>
+        </ul>
+  </div>
+      <div class="banner-bg-t"></div>
+      <div class="banner-bg"> <img src="images/bannerbg.jpg"> </div>
+    </div>
+<div id="page-content" class="wrapper" style="min-height: 800px;"> 
+      <!--left-->
+      <div class="sidebar"> 
+    <!--左边菜单栏-->
+    <div class="sidebar-nav _nav_title">
+          <div class="left-nav-title">财务中心</div>
+          <dl>
+        <dt class="select"> <a  nav-target='mainFrame'
+                                                    data="/fund/playerTransfer/transfers.html?t=930824"  href="transfers.html"> <i class="navico home"></i> 额度转换</a> </dt>
+      </dl>
+          <dl>
+        <dt class=""> <a  nav-target='mainFrame'
+                                                    data="recharge.html?t=930824"  href="recharge.html"> <i class="navico deposit"></i> 存款专区</a> </dt>
+      </dl>
+          <dl>
+        <dt class=""> <a  nav-target='mainFrame'
+                                                    data="/player/withdraw/withdrawList.html?t=930824"  href="withdrawList.html"> <i class="navico withdraw"></i> 取款专区</a> </dt>
+      </dl>
+          <dl>
+        <dt class=""> <a  nav-target='mainFrame'
+                                                    data="/fund/transaction/list.html?t=930824"  href="list.html"> <i class="navico capital"></i> 资金记录</a> </dt>
+      </dl>
+          <dl>
+        <dt class=""> <a  nav-target='mainFrame'
+                                                    data="/gameOrder/index.html?t=930824"  href="gameOrder.html"> <i class="navico gamerecord"></i> 投注记录</a> </dt>
+      </dl>
+          <dl>
+        <dt class=""> <a  nav-target='mainFrame'
+                                                    data="/preferential/list.html?t=930824"  href="preferential.html"> <i class="navico sale"></i> 优惠记录</a> </dt>
+      </dl>
+          <div class="left-nav-title">个人中心</div>
+          <dl>
+        <dt class=""> <a  nav-target='mainFrame'
+                                                    data="gameNotice.html?t=930824"  href="gameNotice.html"> <i class="navico info"></i> 消息公告</a> </dt>
+      </dl>
+          <dl>
+        <dt class=""> <a  nav-target='mainFrame'
+                                                    data="/personInfo/index.html?t=930824"  href="personInfo.html"> <i class="navico accout"></i> 个人资料</a> </dt>
+      </dl>
+          <dl>
+        <dt class=""> <a  nav-target='mainFrame'
+                                                    data="/playerRecommendAward/recommendBonus.html?t=930824"  href="recommendBonus.html"> <i class="navico recommend"></i> 全民推广</a> </dt>
+      </dl>
+          <dl>
+        <dt class=""> <a  nav-target='mainFrame'
+                                                    data="/personInfo/password/index.html?t=930824"  href="password.html"> <i class="navico recommend"></i> 修改密码</a> </dt>
+      </dl>
+        </div>
+  </div>
+      <!--right-->
+      <div id="mainFrame" class="main-wrap">
+    <form name="transferForm">
+          <input type="hidden" value="" name="isRefresh">
+          <div class="notice">
+        <div class="notice-left"><em class="path"></em></div>
+        <div class="path-right"> <a class="cursor">额度转换</a> </div>
+      </div>
+          <!--资产-->
+          <div class="account s2">
+        <div class="loading-a">
+              <div class="spiner-example"> <img src="images/022b.gif"> </div>
+            </div>
+        <div class="property">
+              <div class="property-left"> 总资产<em class="total-money">0.00</em>
+            <div class="m-loading-icon-x" style="display: none"><img src="images/022b.gif"></div>
+            <a title="刷新总资产" class="ico-ask refresh" data-rel="{&quot;precall&quot;:&quot;&quot;,&quot;callback&quot;:&quot;&quot;,post:&quot;&quot;,opType:&quot;function&quot;,dataType:&quot;&quot;,target:&quot;getAllApiBalance&quot;,confirm:&quot;&quot;,text:&quot;&quot;,size:&quot;&quot; }"> </a> </div>
+              <button title="切换至手动额度转换" class="btn btn-gray btn-big btn-edzh" id="btn_sd" type="button" onclick="javascript:window.location.href='changeAutoPay.html'"> 切换至手动额度转换 </button>
+              <button title="" class="btn btn-blue btn-big btn-money-back" type="button" data-rel="{&quot;precall&quot;:&quot;&quot;,&quot;callback&quot;:&quot;&quot;,post:&quot;&quot;,opType:&quot;function&quot;,dataType:&quot;&quot;,target:&quot;recoveryApi&quot;,confirm:&quot;&quot;,text:&quot;&quot;,size:&quot;&quot; }"> <i class="btn-money-back-white"></i> 资金回收 </button>
+            </div>
+        <div>
+              <div class="balance">
+            <div class="wallet one">
+                  <dl>
+                <dt> 钱包余额</dt>
+                <dd class="orange wallet-money"> 0.00</dd>
+                <div class="m-loading-icon-x" style="display: none"><img src="images/022b.gif"></div>
+              </dl>
+                </div>
+            <div class="balance-right pull-left">
+                  <div class="game onmouse api-info api-34" type="button" data-toggle="tooltip" data-placement="bottom"> <a title="回收" class="title-ref" data-rel="{&quot;precall&quot;:&quot;&quot;,&quot;callback&quot;:&quot;&quot;,post:&quot;&quot;,opType:&quot;function&quot;,dataType:&quot;&quot;,target:&quot;recoveryApi&quot;,confirm:&quot;&quot;,text:&quot;&quot;,size:&quot;&quot;,&quot;api&quot;:&quot;34&quot; }"> <i class="btn-money-back-blue"></i> </a>
+                <p class="game-left api-logo-box active"> <i class="api-logo-34 site7051"></i> </p>
+                <p class="game-right"> <span class="title">KY棋牌</span> <span class="blue api-money" id="api-money-34">0.00</span> </p>
+              </div>
+                  <div class="game onmouse loading-api loading-34" style="display: none;">
+                <div class="g-loading-icon"><img src="images/022b.gif"></div>
+              </div>
+                  <div class="game onmouse api-info api-3" type="button" data-toggle="tooltip" data-placement="bottom">
+                <p class="game-left api-logo-box "> <i class="api-logo-3 site7051"></i> </p>
+                <p class="game-right"> <span class="title">MG电子</span> <span class="blue api-money" id="api-money-3">0.00</span> </p>
+              </div>
+                  <div class="game onmouse loading-api loading-3" style="display: none;">
+                <div class="g-loading-icon"><img src="images/022b.gif"></div>
+              </div>
+                  <div class="game onmouse api-info api-6" type="button" data-toggle="tooltip" data-placement="bottom">
+                <p class="game-left api-logo-box "> <i class="api-logo-6 site7051"></i> </p>
+                <p class="game-right"> <span class="title">PT电子</span> <span class="blue api-money" id="api-money-6">0.00</span> </p>
+              </div>
+                  <div class="game onmouse loading-api loading-6" style="display: none;">
+                <div class="g-loading-icon"><img src="images/022b.gif"></div>
+              </div>
+                  <div class="game onmouse api-info api-46" type="button" data-toggle="tooltip" data-placement="bottom">
+                <p class="game-left api-logo-box "> <i class="api-logo-46 site7051"></i> </p>
+                <p class="game-right"> <span class="title">乐游棋牌</span> <span class="blue api-money" id="api-money-46">0.00</span> </p>
+              </div>
+                  <div class="game onmouse loading-api loading-46" style="display: none;">
+                <div class="g-loading-icon"><img src="images/022b.gif"></div>
+              </div>
+                  <div class="game onmouse api-info api-25" type="button" data-toggle="tooltip" data-placement="bottom">
+                <p class="game-left api-logo-box "> <i class="api-logo-25 site7051"></i> </p>
+                <p class="game-right"> <span class="title">SG电子</span> <span class="blue api-money" id="api-money-25">0.00</span> </p>
+              </div>
+                  <div class="game onmouse loading-api loading-25" style="display: none;">
+                <div class="g-loading-icon"><img src="images/022b.gif"></div>
+              </div>
+                  <div class="game onmouse api-info api-33" type="button" data-toggle="tooltip" data-placement="bottom">
+                <p class="game-left api-logo-box "> <i class="api-logo-33 site7051"></i> </p>
+                <p class="game-right"> <span class="title">SUN太阳厅</span> <span class="blue api-money" id="api-money-33">0.00</span> </p>
+              </div>
+                  <div class="game onmouse loading-api loading-33" style="display: none;">
+                <div class="g-loading-icon"><img src="images/022b.gif"></div>
+              </div>
+                  <div class="game onmouse api-info api-16" type="button" data-toggle="tooltip" data-placement="bottom">
+                <p class="game-left api-logo-box "> <i class="api-logo-16 site7051"></i> </p>
+                <p class="game-right"> <span class="title">Ebet如意厅</span> <span class="blue api-money" id="api-money-16">0.00</span> </p>
+              </div>
+                  <div class="game onmouse loading-api loading-16" style="display: none;">
+                <div class="g-loading-icon"><img src="images/022b.gif"></div>
+              </div>
+                  <div class="game onmouse api-info api-42" type="button" data-toggle="tooltip" data-placement="bottom">
+                <p class="game-left api-logo-box "> <i class="api-logo-42 site7051"></i> </p>
+                <p class="game-right"> <span class="title">VG棋牌</span> <span class="blue api-money" id="api-money-42">0.00</span> </p>
+              </div>
+                  <div class="game onmouse loading-api loading-42" style="display: none;">
+                <div class="g-loading-icon"><img src="images/022b.gif"></div>
+              </div>
+                  <div class="game onmouse api-info api-9" type="button" data-toggle="tooltip" data-placement="bottom">
+                <p class="game-left api-logo-box "> <i class="api-logo-9 site7051"></i> </p>
+                <p class="game-right"> <span class="title">AG大厅</span> <span class="blue api-money" id="api-money-9">0.00</span> </p>
+              </div>
+                  <div class="game onmouse loading-api loading-9" style="display: none;">
+                <div class="g-loading-icon"><img src="images/022b.gif"></div>
+              </div>
+                  <div class="game onmouse api-info api-43" type="button" data-toggle="tooltip" data-placement="bottom">
+                <p class="game-left api-logo-box "> <i class="api-logo-43 site7051"></i> </p>
+                <p class="game-right"> <span class="title">棋乐游</span> <span class="blue api-money" id="api-money-43">0.00</span> </p>
+              </div>
+                  <div class="game onmouse loading-api loading-43" style="display: none;">
+                <div class="g-loading-icon"><img src="images/022b.gif"></div>
+              </div>
+                  <div class="game onmouse api-info api-7" type="button" data-toggle="tooltip" data-placement="bottom">
+                <p class="game-left api-logo-box "> <i class="api-logo-7 site7051"></i> </p>
+                <p class="game-right"> <span class="title">OG东方厅</span> <span class="blue api-money" id="api-money-7">0.00</span> </p>
+              </div>
+                  <div class="game onmouse loading-api loading-7" style="display: none;">
+                <div class="g-loading-icon"><img src="images/022b.gif"></div>
+              </div>
+                  <div class="game onmouse api-info api-38" type="button" data-toggle="tooltip" data-placement="bottom">
+                <p class="game-left api-logo-box "> <i class="api-logo-38 site7051"></i> </p>
+                <p class="game-right"> <span class="title">PP电子</span> <span class="blue api-money" id="api-money-38">0.00</span> </p>
+              </div>
+                  <div class="game onmouse loading-api loading-38" style="display: none;">
+                <div class="g-loading-icon"><img src="images/022b.gif"></div>
+              </div>
+                  <div class="game onmouse api-info api-17" type="button" data-toggle="tooltip" data-placement="bottom">
+                <p class="game-left api-logo-box "> <i class="api-logo-17 site7051"></i> </p>
+                <p class="game-right"> <span class="title">SA澳门厅</span> <span class="blue api-money" id="api-money-17">0.00</span> </p>
+              </div>
+                  <div class="game onmouse loading-api loading-17" style="display: none;">
+                <div class="g-loading-icon"><img src="images/022b.gif"></div>
+              </div>
+                  <div class="game onmouse api-info api-5" type="button" data-toggle="tooltip" data-placement="bottom">
+                <p class="game-left api-logo-box "> <i class="api-logo-5 site7051"></i> </p>
+                <p class="game-right"> <span class="title">GD锦绣厅</span> <span class="blue api-money" id="api-money-5">0.00</span> </p>
+              </div>
+                  <div class="game onmouse loading-api loading-5" style="display: none;">
+                <div class="g-loading-icon"><img src="images/022b.gif"></div>
+              </div>
+                  <div class="game onmouse api-info api-47" type="button" data-toggle="tooltip" data-placement="bottom">
+                <p class="game-left api-logo-box "> <i class="api-logo-47 site7051"></i> </p>
+                <p class="game-right"> <span class="title">欢乐棋牌</span> <span class="blue api-money" id="api-money-47">0.00</span> </p>
+              </div>
+                  <div class="game onmouse loading-api loading-47" style="display: none;">
+                <div class="g-loading-icon"><img src="images/022b.gif"></div>
+              </div>
+                  <div class="game onmouse api-info api-48" type="button" data-toggle="tooltip" data-placement="bottom">
+                <p class="game-left api-logo-box "> <i class="api-logo-48 site7051"></i> </p>
+                <p class="game-right"> <span class="title">CQ9电子</span> <span class="blue api-money" id="api-money-48">0.00</span> </p>
+              </div>
+                  <div class="game onmouse loading-api loading-48" style="display: none;">
+                <div class="g-loading-icon"><img src="images/022b.gif"></div>
+              </div>
+                  <div class="game onmouse api-info api-49" type="button" data-toggle="tooltip" data-placement="bottom">
+                <p class="game-left api-logo-box "> <i class="api-logo-49 site7051"></i> </p>
+                <p class="game-right"> <span class="title">GG捕鱼</span> <span class="blue api-money" id="api-money-49">0.00</span> </p>
+              </div>
+                  <div class="game onmouse loading-api loading-49" style="display: none;">
+                <div class="g-loading-icon"><img src="images/022b.gif"></div>
+              </div>
+                  <div class="game onmouse api-info api-53" type="button" data-toggle="tooltip" data-placement="bottom">
+                <p class="game-left api-logo-box "> <i class="api-logo-53 site7051"></i> </p>
+                <p class="game-right"> <span class="title">EA尊爵厅</span> <span class="blue api-money" id="api-money-53">0.00</span> </p>
+              </div>
+                  <div class="game onmouse loading-api loading-53" style="display: none;">
+                <div class="g-loading-icon"><img src="images/022b.gif"></div>
+              </div>
+                </div>
+          </div>
+            </div>
+      </div>
+          <div class="gameAnnouncement"></div>
+        </form>
+    <script type="text/javascript">
+            curl(['site/fund/transfers/auto/Index'], function(Page) {
+                page = new Page();
+                page.bindButtonEvents();
+            });
+        </script> 
+  </div>
+    </div>
+<div class="preloader"></div>
+<div class="real-time-inform">
+      <div class="clearfix"><span class="unfold"> <i class="fa fa-angle-double-up m-r-xs pull-left"></i> <a href="javascript:;" class="unfold-z"></a> <a href="javascript:;" class="unfold-s"></a></span> </div>
+      <div class="max-ccc"> </div>
+    </div>
+</body>
+</html>

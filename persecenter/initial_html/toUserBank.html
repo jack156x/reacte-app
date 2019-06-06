@@ -1,0 +1,291 @@
+<html class=" js no-touch csstransforms csstransitions">
+<head>
+<title>个人资料 -  玩家中心  -  大众棋牌</title>
+<meta charset="utf-8">
+<meta name="keywords" content="keywords">
+<meta name="description" content="description">
+<meta name="author" content="author">
+<meta name="Copyright" content="author">
+<meta name="viewport" content="width=device-width">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<link rel="shortcut icon" href="/images/favicon.png">
+<link rel="apple-touch-icon" href="images/touchicon.png">
+<link rel="stylesheet" type="text/css" href="css/bootstrap-dialog.css"/>
+<link rel="stylesheet" type="text/css" href="css/font-awesome.css"/>
+<link rel="stylesheet" type="text/css" href="css/public-mod.css"/>
+<link rel="stylesheet" type="text/css" href="css/login.css"/>
+<link rel="stylesheet" type="text/css" href="css/bootstrap.css"/>
+<link rel="stylesheet" type="text/css" href="css/pcenter-style.css"/>
+<link rel="stylesheet" type="text/css" href="css/base.css"/>
+<link rel="stylesheet" type="text/css" href="css/zh_CN.css"/>
+<link rel="icon" type="image/png" href="images/favicon.png" sizes="32x32">
+<script type="text/javascript" src="js/message_zh_CN.js"></script>
+<script type="text/javascript" src="js/jquery1.91.min.js"></script>
+<script type="text/javascript" src="js/jquery.plugs.js"></script>
+<script type="text/javascript" src="js/js.js"></script>
+<link rel="icon" type="image/png" href="images/favicon.png" sizes="32x32">
+</head>
+<body class="" style="padding-right: 0px;">
+
+<!--头部-->
+<div class="top-wrap">
+  <div class="top-top"> 
+    <!--顶部右边-->
+    <div class="top-right">
+      <div class="member">
+        <div id="site-nav">
+          <ul>
+            <li>
+              <div class="menu"> <a class="menu-hd" href="javascript:;"> <span class="orange" id="ofullname"> linda</span> <b></b> </a>
+                <div class="menu-bd box">
+                  <div class="global-account-head"> <a href="javaScript:;" class="global-account-img"> </a>
+                    <p class="global-account-name" title="name"> <span  class="_hours"></span> </p>
+                    <a class="accountSet" href="personInfo.html">个人资料</a> <span class="global-top-seperator">|</span> <a class="transactionRecords" href="gameOrder.html">投注记录</a> </div>
+                  <div class="global-account-money"> 总资产: <a href="javascript:;" class="show-remaining btn btn-filter btn-xs real-time-btn show-remaining">显示金额</a> <span class="hide-astrict"> <em class="total-money astrict"> </em> <i class="ico-ask showsmall refresh"></i> </span>
+                    <p class="dottline space"></p>
+                    <div class="total"> <a name="recharge" href="recharge.html">存款</a> <span class="global-top-seperator">|</span> <a name="withdraws" href="withdrawList.html">取款</a> </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <a href="/pcenter/passport/logout.html" target="_top" class="logout">[退出]</a>
+        <label id="playerUnread">
+        <label class="line-after info-down-btn"> <span class="new"> <i class="new-ico select"></i> <a href="javascript:void(0)">新消息</a> </span> </label>
+        </label>
+      </div>
+    </div>
+    <!--顶部左边-->
+    <div class="top-left">
+      <div class="select-lang" id="divLanguage">
+        <p><span class="flag zh"></span>简体中文</p>
+        <ul style="display: none;">
+          <li><a href="javascript:void(0)" change="language" lang="zh" country="CN" rel="zh"><span class="flag zh"></span>简体中文</a></li>
+        </ul>
+      </div>
+      <label class="time line-after"> <span id="userTime">GMT+08:00</span> <span id="index-clock" class="nav-shadow clock-show"> </span> </label>
+    </div>
+  </div>
+</div>
+<!--banner-->
+<div class="banner"> <a href="/">
+  <div class="logo"><img src="images/1540967008245.png_220x90.png"></div>
+  </a>
+  <div class="right">
+    <ul class="nav-menu">
+      <li> <a class="nav-menu-ico aip-type-home-ico" href="/"> <span>网站首页</span> </a> </li>
+      <li> <a class="nav-menu-ico aip-type-5-ico" href="/commonPage/gamePage/loading.html?apiId=34&amp;apiTypeId=5"> <span>棋牌</span> </a> </li>
+      <li> <a class="nav-menu-ico aip-type-2-ico" href="/casino.html?apiType=2&amp;apiId="> <span>电子游艺</span> </a> </li>
+      <li> <a class="nav-menu-ico aip-type-1-ico" href="/live.html"> <span>真人视讯</span> </a> </li>
+      <li> <a class="nav-menu-ico aip-type-promo-ico" href="/promo.html"> <span>优惠活动</span> </a> </li>
+    </ul>
+  </div>
+  <div class="banner-bg-t"></div>
+  <div class="banner-bg"><img src="images/bannerbg.jpg"> </div>
+</div>
+<div id="page-content" class="wrapper" style="min-height: 800px;"> 
+  <!--left-->
+  <div class="sidebar"> 
+    <!--左边菜单栏-->
+    <div class="sidebar-nav _nav_title">
+      <div class="left-nav-title">财务中心</div>
+      <dl>
+        <dt class=""> <a  nav-target='mainFrame'
+                                                    data="/fund/playerTransfer/transfers.html?t=930824"  href="transfers.html"> <i class="navico home"></i> 额度转换</a> </dt>
+      </dl>
+      <dl>
+        <dt class=""> <a  nav-target='mainFrame'
+                                                    data="recharge.html?t=930824"  href="recharge.html"> <i class="navico deposit"></i> 存款专区</a> </dt>
+      </dl>
+      <dl>
+        <dt class=""> <a  nav-target='mainFrame'
+                                                    data="/player/withdraw/withdrawList.html?t=930824"  href="withdrawList.html"> <i class="navico withdraw"></i> 取款专区</a> </dt>
+      </dl>
+      <dl>
+        <dt class=""> <a  nav-target='mainFrame'
+                                                    data="/fund/transaction/list.html?t=930824"  href="list.html"> <i class="navico capital"></i> 资金记录</a> </dt>
+      </dl>
+      <dl>
+        <dt class=""> <a  nav-target='mainFrame'
+                                                    data="/gameOrder/index.html?t=930824"  href="gameOrder.html"> <i class="navico gamerecord"></i> 投注记录</a> </dt>
+      </dl>
+      <dl>
+        <dt class=""> <a  nav-target='mainFrame'
+                                                    data="/preferential/list.html?t=930824"  href="preferential.html"> <i class="navico sale"></i> 优惠记录</a> </dt>
+      </dl>
+      <div class="left-nav-title">个人中心</div>
+      <dl>
+        <dt class=""> <a  nav-target='mainFrame'
+                                                    data="gameNotice.html?t=930824"  href="gameNotice.html"> <i class="navico info"></i> 消息公告</a> </dt>
+      </dl>
+      <dl>
+        <dt class="select"> <a  nav-target='mainFrame'
+                                                    data="/personInfo/index.html?t=930824"  href="personInfo.html"> <i class="navico accout"></i> 个人资料</a> </dt>
+      </dl>
+      <dl>
+        <dt class=""> <a  nav-target='mainFrame'
+                                                    data="/playerRecommendAward/recommendBonus.html?t=930824"  href="recommendBonus.html"> <i class="navico recommend"></i> 全民推广</a> </dt>
+      </dl>
+      <dl>
+        <dt class=""> <a  nav-target='mainFrame'
+                                                    data="/personInfo/password/index.html?t=930824"  href="password.html"> <i class="navico recommend"></i> 修改密码</a> </dt>
+      </dl>
+    </div>
+  </div>
+  <!--right-->
+  <div id="mainFrame" class="main-wrap">
+    <div class="main-wrap">
+      <div class="notice">
+        <div class="notice-left"><em class="path"></em></div>
+        <div class="path-right"><a class="cursor">个人资料</a></div>
+      </div>
+      <form name="bindBankcardForm" novalidate>
+        <input type="hidden" name="gb.token" value="5d997ba5-6bbc-486f-a58f-7d570f559981">
+        <div class="user-info">
+          <h3>绑定取款银行卡</h3>
+          <h4 class="gray" style="font-weight: normal; padding-top: 10px">取款前请先添加银行卡,成功取款后,我们会将款项打至您填写的这张卡上!</h4>
+          <div class="m-t-sm line-hi32">
+            <div id="validateRule" style="display: none">rules:{'result.bankDeposit':{required:true,minlength:0,maxlength:200},'result.bankcardNumber':{required:true,minlength:10,maxlength:25,pattern:/^[0-9]{10,25}$/},'result.bankcardMasterName':{required:true,minlength:2,maxlength:30,pattern:/^[a-zA-Z\u0020\u4E00-\u9FA5\u0800-\u4e00\*][a-zA-Z0-9\u0020\u4E00-\u9FA5\u0800-\u4e00\·\.\* ]{0,28}[a-zA-Z\u0020\u4E00-\u9FA5\u0800-\u4e00\*]$/,remote:{        url: '/pcenter/personInfo/checkBankNameExist.html',        cache: false,        type: 'POST',        data: {                     'result.bankcardMasterName': function() {            return $("[name='result.bankcardMasterName']").val();          },          editType: function() {            return $("[name=editType]").val();          }        }      }},'result.bankName':{required:true}},messages:{'result.bankDeposit':{required:'{org.hibernate.validator.constraints.NotBlank.message}',minlength:'{org.hibernate.validator.constraints.Length.message}',maxlength:'{org.hibernate.validator.constraints.Length.message}'},'result.bankcardNumber':{required:'银行卡号不能为空',minlength:'银行卡号长度应在10-25范围内',maxlength:'银行卡号长度应在10-25范围内',pattern:'edit.info.bank.card.format.error'},'result.bankcardMasterName':{required:'{org.hibernate.validator.constraints.NotBlank.message}',minlength:'{org.hibernate.validator.constraints.Length.message}',maxlength:'{org.hibernate.validator.constraints.Length.message}',pattern:'passport.edit.info.format.realName.error',remote:'passport.realName.exist'},'result.bankName':{required:'passport.edit.info.select.bank'}},</div>
+            <div class="control-grouptwo">
+              <label class="control-left">真实姓名：</label>
+              <div class="controls"> <span>张*三</span>
+                <input type="hidden" name="result.bankcardMasterName" value="张*三">
+                <input type="hidden" name="editType" value="edit">
+              </div>
+              <p class="tipsgray">银行卡户名与真实姓名一致才能取款成功</p>
+            </div>
+            <div class="control-grouptwo clearfix ud-select" style="margin-top: 0;">
+              <label class="control-left">银行：</label>
+              <div class="bank-deposit" id="bank_list" style="margin-bottom: 0">
+                <div class="bank-total">
+                  <label class="bank " bankcode="icbc"> <span class="radio">
+                    <input name="result.bankName" tipsname="result.bankNametips" showsuccmsg="false" type="radio" value="icbc">
+                    </span> <span class="radio-bank" title="中国工商银行"> <i class="pay-bank icbc"></i> </span> <span class="bank-logo-name">中国工商银行</span> </label>
+                  <label class="bank " bankcode="ccb"> <span class="radio">
+                    <input name="result.bankName" tipsname="result.bankNametips" showsuccmsg="false" type="radio" value="ccb">
+                    </span> <span class="radio-bank" title="中国建设银行"> <i class="pay-bank ccb"></i> </span> <span class="bank-logo-name">中国建设银行</span> </label>
+                  <label class="bank " bankcode="abc"> <span class="radio">
+                    <input name="result.bankName" tipsname="result.bankNametips" showsuccmsg="false" type="radio" value="abc">
+                    </span> <span class="radio-bank" title="中国农业银行"> <i class="pay-bank abc"></i> </span> <span class="bank-logo-name">中国农业银行</span> </label>
+                  <label class="bank " bankcode="boc"> <span class="radio">
+                    <input name="result.bankName" tipsname="result.bankNametips" showsuccmsg="false" type="radio" value="boc">
+                    </span> <span class="radio-bank" title="中国银行"> <i class="pay-bank boc"></i> </span> <span class="bank-logo-name">中国银行</span> </label>
+                  <label class="bank " bankcode="cmb"> <span class="radio">
+                    <input name="result.bankName" tipsname="result.bankNametips" showsuccmsg="false" type="radio" value="cmb">
+                    </span> <span class="radio-bank" title="招商银行"> <i class="pay-bank cmb"></i> </span> <span class="bank-logo-name">招商银行</span> </label>
+                  <label class="bank " bankcode="cmbc"> <span class="radio">
+                    <input name="result.bankName" tipsname="result.bankNametips" showsuccmsg="false" type="radio" value="cmbc">
+                    </span> <span class="radio-bank" title="中国民生银行"> <i class="pay-bank cmbc"></i> </span> <span class="bank-logo-name">中国民生银行</span> </label>
+                  <label class="bank " bankcode="ceb"> <span class="radio">
+                    <input name="result.bankName" tipsname="result.bankNametips" showsuccmsg="false" type="radio" value="ceb">
+                    </span> <span class="radio-bank" title="中国光大银行"> <i class="pay-bank ceb"></i> </span> <span class="bank-logo-name">中国光大银行</span> </label>
+                  <label class="bank " bankcode="cib"> <span class="radio">
+                    <input name="result.bankName" tipsname="result.bankNametips" showsuccmsg="false" type="radio" value="cib">
+                    </span> <span class="radio-bank" title="兴业银行"> <i class="pay-bank cib"></i> </span> <span class="bank-logo-name">兴业银行</span> </label>
+                  <label class="bank " bankcode="spdb"> <span class="radio">
+                    <input name="result.bankName" tipsname="result.bankNametips" showsuccmsg="false" type="radio" value="spdb">
+                    </span> <span class="radio-bank" title="上海浦东发展银行"> <i class="pay-bank spdb"></i> </span> <span class="bank-logo-name">上海浦东发展银行</span> </label>
+                  <label class="bank " bankcode="comm"> <span class="radio">
+                    <input name="result.bankName" tipsname="result.bankNametips" showsuccmsg="false" type="radio" value="comm">
+                    </span> <span class="radio-bank" title="交通银行"> <i class="pay-bank comm"></i> </span> <span class="bank-logo-name">交通银行</span> </label>
+                  <label class="bank " bankcode="spabank"> <span class="radio">
+                    <input name="result.bankName" tipsname="result.bankNametips" showsuccmsg="false" type="radio" value="spabank">
+                    </span> <span class="radio-bank" title="平安银行"> <i class="pay-bank spabank"></i> </span> <span class="bank-logo-name">平安银行</span> </label>
+                  <label class="bank " bankcode="bjbank"> <span class="radio">
+                    <input name="result.bankName" tipsname="result.bankNametips" showsuccmsg="false" type="radio" value="bjbank">
+                    </span> <span class="radio-bank" title="北京银行"> <i class="pay-bank bjbank"></i> </span> <span class="bank-logo-name">北京银行</span> </label>
+                  <label class="bank " bankcode="citic"> <span class="radio">
+                    <input name="result.bankName" tipsname="result.bankNametips" showsuccmsg="false" type="radio" value="citic">
+                    </span> <span class="radio-bank" title="中信银行"> <i class="pay-bank citic"></i> </span> <span class="bank-logo-name">中信银行</span> </label>
+                  <label class="bank " bankcode="gdb"> <span class="radio">
+                    <input name="result.bankName" tipsname="result.bankNametips" showsuccmsg="false" type="radio" value="gdb">
+                    </span> <span class="radio-bank" title="广东发展银行"> <i class="pay-bank gdb"></i> </span> <span class="bank-logo-name">广东发展银行</span> </label>
+                  <label class="bank " bankcode="psbc"> <span class="radio">
+                    <input name="result.bankName" tipsname="result.bankNametips" showsuccmsg="false" type="radio" value="psbc">
+                    </span> <span class="radio-bank" title="中国邮政储蓄银行"> <i class="pay-bank psbc"></i> </span> <span class="bank-logo-name">中国邮政储蓄银行</span> </label>
+                </div>
+                <div name="hideBank" style="display: none;" class="other">
+                  <label class="bank " bankcode="jsbank"> <span class="radio">
+                    <input name="result.bankName" showsuccmsg="false" type="radio" value="jsbank">
+                    </span> <span class="radio-bank" title="江苏银行"> <i class="pay-bank jsbank"></i> </span> <span class="bank-logo-name">江苏银行</span> </label>
+                  <label class="bank " bankcode="hxbank"> <span class="radio">
+                    <input name="result.bankName" showsuccmsg="false" type="radio" value="hxbank">
+                    </span> <span class="radio-bank" title="华夏银行"> <i class="pay-bank hxbank"></i> </span> <span class="bank-logo-name">华夏银行</span> </label>
+                  <label class="bank " bankcode="shbank"> <span class="radio">
+                    <input name="result.bankName" showsuccmsg="false" type="radio" value="shbank">
+                    </span> <span class="radio-bank" title="上海银行"> <i class="pay-bank shbank"></i> </span> <span class="bank-logo-name">上海银行</span> </label>
+                  <label class="bank " bankcode="bohaib"> <span class="radio">
+                    <input name="result.bankName" showsuccmsg="false" type="radio" value="bohaib">
+                    </span> <span class="radio-bank" title="渤海银行"> <i class="pay-bank bohaib"></i> </span> <span class="bank-logo-name">渤海银行</span> </label>
+                  <label class="bank " bankcode="hkbea"> <span class="radio">
+                    <input name="result.bankName" showsuccmsg="false" type="radio" value="hkbea">
+                    </span> <span class="radio-bank" title="东亚银行"> <i class="pay-bank hkbea"></i> </span> <span class="bank-logo-name">东亚银行</span> </label>
+                  <label class="bank " bankcode="nbbank"> <span class="radio">
+                    <input name="result.bankName" showsuccmsg="false" type="radio" value="nbbank">
+                    </span> <span class="radio-bank" title="宁波银行"> <i class="pay-bank nbbank"></i> </span> <span class="bank-logo-name">宁波银行</span> </label>
+                  <label class="bank " bankcode="czbank"> <span class="radio">
+                    <input name="result.bankName" showsuccmsg="false" type="radio" value="czbank">
+                    </span> <span class="radio-bank" title="浙商银行"> <i class="pay-bank czbank"></i> </span> <span class="bank-logo-name">浙商银行</span> </label>
+                  <label class="bank " bankcode="hzcb"> <span class="radio">
+                    <input name="result.bankName" showsuccmsg="false" type="radio" value="hzcb">
+                    </span> <span class="radio-bank" title="杭州银行"> <i class="pay-bank hzcb"></i> </span> <span class="bank-logo-name">杭州银行</span> </label>
+                  <label class="bank " bankcode="gcb"> <span class="radio">
+                    <input name="result.bankName" showsuccmsg="false" type="radio" value="gcb">
+                    </span> <span class="radio-bank" title="广州银行"> <i class="pay-bank gcb"></i> </span> <span class="bank-logo-name">广州银行</span> </label>
+                  <label class="bank " bankcode="fjnx"> <span class="radio">
+                    <input name="result.bankName" showsuccmsg="false" type="radio" value="fjnx">
+                    </span> <span class="radio-bank" title="福建农商银行"> <i class="pay-bank fjnx"></i> </span> <span class="bank-logo-name">福建农商银行</span> </label>
+                  <label class="bank " bankcode="hangseng"> <span class="radio">
+                    <input name="result.bankName" showsuccmsg="false" type="radio" value="hangseng">
+                    </span> <span class="radio-bank" title="恒生银行"> <i class="pay-bank hangseng"></i> </span> <span class="bank-logo-name">恒生银行</span> </label>
+                  <label class="bank " bankcode="tzb"> <span class="radio">
+                    <input name="result.bankName" showsuccmsg="false" type="radio" value="tzb">
+                    </span> <span class="radio-bank" title="台州银行"> <i class="pay-bank tzb"></i> </span> <span class="bank-logo-name">台州银行</span> </label>
+                  <label class="bank " bankcode="jlbank"> <span class="radio">
+                    <input name="result.bankName" showsuccmsg="false" type="radio" value="jlbank">
+                    </span> <span class="radio-bank" title="吉林银行"> <i class="pay-bank jlbank"></i> </span> <span class="bank-logo-name">吉林银行</span> </label>
+                  <label class="bank " bankcode="qdbank"> <span class="radio">
+                    <input name="result.bankName" showsuccmsg="false" type="radio" value="qdbank">
+                    </span> <span class="radio-bank" title="青岛银行"> <i class="pay-bank qdbank"></i> </span> <span class="bank-logo-name">青岛银行</span> </label>
+                  <label class="bank " bankcode="other_bank"> <span class="radio">
+                    <input name="result.bankName" showsuccmsg="false" type="radio" value="other_bank">
+                    </span> <span class="radio-bank" title="其他银行"> <i class="pay-bank other_bank"></i> </span> <span class="bank-logo-name">其他银行</span> </label>
+                </div>
+                <div class="clear"></div>
+                <div class="bank-total" name="bankNameMsg" style="display: none">
+                  <div class="title"> </div>
+                </div>
+              </div>
+              <div class="bank-spreadout set" style="margin-right: 108px; margin-bottom: 0;"> <span name="extendBank" style="display: inline;" class="down"> <a title="展开更多银行" class=" " data-rel="{&quot;precall&quot;:&quot;&quot;,&quot;callback&quot;:&quot;&quot;,post:&quot;&quot;,opType:&quot;function&quot;,dataType:&quot;&quot;,target:&quot;showMoreBank&quot;,confirm:&quot;&quot;,text:&quot;展开更多银行&quot;,size:&quot;&quot; }"> 展开更多银行 </a> <i class="bank-arrico down"></i> </span> <span style="display: none;" name="collapseBank" class="up"> <a title="收起部分银行" class="" data-rel="{&quot;precall&quot;:&quot;&quot;,&quot;callback&quot;:&quot;&quot;,post:&quot;&quot;,opType:&quot;function&quot;,dataType:&quot;&quot;,target:&quot;showMoreBank&quot;,confirm:&quot;&quot;,text:&quot;收起部分银行&quot;,size:&quot;&quot; }"> 收起部分银行 </a> <i class="bank-arrico up"></i> </span> </div>
+              <div class="control-grouptwo">
+                <label class="control-left">&nbsp;</label>
+                <div class="controls"> <span tipsname="result.bankName-tips"></span> </div>
+              </div>
+            </div>
+            <div class="control-grouptwo">
+              <label class="control-left">银行卡号：</label>
+              <div class="controls">
+                <input type="text" class="input bn ignore" placeholder="" maxlength="30" name="bankcardNumber2" tipsname="result.bankcardNumber-tips" autocomplete="off">
+                <input type="hidden" class="input" name="result.bankcardNumber">
+              </div>
+            </div>
+            <div class="control-grouptwo">
+              <label class="control-left">开户行：</label>
+              <div class="controls">
+                <input type="text" autocomplete="off" class="input bn result-bankDeposit" name="result.bankDeposit" value="">
+              </div>
+              <p class="tipsgray">如：河北唐山建设银行</p>
+            </div>
+            <div class="control-grouptwo">
+              <label class="control-label" style="width:132px;"></label>
+              <div class="controls" id="submitInfo"> <a title="重置" class="btn btn-gray middle-big " data-rel="{&quot;precall&quot;:&quot;&quot;,&quot;callback&quot;:&quot;&quot;,post:&quot;&quot;,opType:&quot;function&quot;,dataType:&quot;&quot;,target:&quot;resetBankCard&quot;,confirm:&quot;&quot;,text:&quot;重置&quot;,size:&quot;&quot; }"> 重置 </a> <a title="确认" class="btn btn-blue middle-big btn-bank" data-rel="{&quot;precall&quot;:&quot;validateForm&quot;,&quot;callback&quot;:&quot;&quot;,post:&quot;&quot;,opType:&quot;function&quot;,dataType:&quot;&quot;,target:&quot;submitBank&quot;,confirm:&quot;&quot;,text:&quot;确认&quot;,size:&quot;&quot; }"> 确认 </a> </div>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+</body>
+</html>

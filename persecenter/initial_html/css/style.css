@@ -1,0 +1,28 @@
+﻿@charset "utf-8";
+/* CSS Document 
+** author:永易搜
+** URL:http://www.yongyisou.com/
+** tips:CSS文件非专业勿动，编码格式为utf-8
+*/
+*{ padding:0px; margin:0px;}
+li{list-style:none;}
+img{border:none;border:0;}
+a{text-decoration:none;color:#000;}
+a:hover{color:#f00;}
+a:focus {outline:0; } 
+html{font:normal 14px/1.5 "microsoft yahei",tahoma,arial,sans-serif;background:#fff;}
+body{background:#fff;}
+input,input:focus{outline:none;text-indent:5px}
+h1{ font-size:20px}
+h2{ font-size:18px}
+h3{ font-size:16px}
+h4{ font-size:14px}
+/*通用调用*/
+.w1200{width:1200px;height:auto;margin:0 auto;overflow:hidden;}
+.fl{float:left;}
+.fr{float:right;}
+/*首页*/
+
+/*列表*/
+
+/*内容*/

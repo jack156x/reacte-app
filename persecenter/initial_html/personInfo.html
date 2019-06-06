@@ -1,0 +1,223 @@
+<html class=" js no-touch csstransforms csstransitions">
+<head>
+<title>个人资料 -  玩家中心  -  大众棋牌</title>
+<meta charset="utf-8">
+<meta name="keywords" content="keywords">
+<meta name="description" content="description">
+<meta name="author" content="author">
+<meta name="Copyright" content="author">
+<meta name="viewport" content="width=device-width">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<link rel="shortcut icon" href="/images/favicon.png">
+<link rel="apple-touch-icon" href="images/touchicon.png">
+<link rel="stylesheet" type="text/css" href="css/bootstrap-dialog.css"/>
+<link rel="stylesheet" type="text/css" href="css/font-awesome.css"/>
+<link rel="stylesheet" type="text/css" href="css/public-mod.css"/>
+<link rel="stylesheet" type="text/css" href="css/login.css"/>
+<link rel="stylesheet" type="text/css" href="css/bootstrap.css"/>
+<link rel="stylesheet" type="text/css" href="css/pcenter-style.css"/>
+<link rel="stylesheet" type="text/css" href="css/base.css"/>
+<link rel="stylesheet" type="text/css" href="css/zh_CN.css"/>
+<link rel="icon" type="image/png" href="images/favicon.png" sizes="32x32">
+<script type="text/javascript" src="js/message_zh_CN.js"></script>
+<script type="text/javascript" src="js/jquery1.91.min.js"></script>
+<script type="text/javascript" src="js/jquery.plugs.js"></script>
+<script type="text/javascript" src="js/js.js"></script>
+<link rel="icon" type="image/png" href="images/favicon.png" sizes="32x32">
+</head>
+<body class="" style="padding-right: 0px;">
+
+<!--头部-->
+<div class="top-wrap">
+  <div class="top-top"> 
+    <!--顶部右边-->
+    <div class="top-right">
+      <div class="member">
+        <div id="site-nav">
+          <ul>
+            <li>
+              <div class="menu"> <a class="menu-hd" href="javascript:;"> <span class="orange" id="ofullname"> linda</span> <b></b> </a>
+                <div class="menu-bd box">
+                  <div class="global-account-head"> <a href="javaScript:;" class="global-account-img"> </a>
+                    <p class="global-account-name" title="name"> <span  class="_hours"></span> </p>
+                    <a class="accountSet" href="personInfo.html">个人资料</a> <span class="global-top-seperator">|</span> <a class="transactionRecords" href="gameOrder.html">投注记录</a> </div>
+                  <div class="global-account-money"> 总资产: <a href="javascript:;" class="show-remaining btn btn-filter btn-xs real-time-btn show-remaining">显示金额</a> <span class="hide-astrict"> <em class="total-money astrict"> </em> <i class="ico-ask showsmall refresh"></i> </span>
+                    <p class="dottline space"></p>
+                    <div class="total"> <a name="recharge" href="recharge.html">存款</a> <span class="global-top-seperator">|</span> <a name="withdraws" href="withdrawList.html">取款</a> </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <a href="/pcenter/passport/logout.html" target="_top" class="logout">[退出]</a>
+        <label id="playerUnread">
+        <label class="line-after info-down-btn"> <span class="new"> <i class="new-ico select"></i> <a href="javascript:void(0)">新消息</a> </span> </label>
+        </label>
+      </div>
+    </div>
+    <!--顶部左边-->
+    <div class="top-left">
+      <div class="select-lang" id="divLanguage">
+        <p><span class="flag zh"></span>简体中文</p>
+        <ul style="display: none;">
+          <li><a href="javascript:void(0)" change="language" lang="zh" country="CN" rel="zh"><span class="flag zh"></span>简体中文</a></li>
+        </ul>
+      </div>
+      <label class="time line-after"> <span id="userTime">GMT+08:00</span> <span id="index-clock" class="nav-shadow clock-show"> </span> </label>
+    </div>
+  </div>
+</div>
+<!--banner-->
+<div class="banner"> <a href="/">
+  <div class="logo"><img src="images/1540967008245.png_220x90.png"></div>
+  </a>
+  <div class="right">
+    <ul class="nav-menu">
+      <li> <a class="nav-menu-ico aip-type-home-ico" href="/"> <span>网站首页</span> </a> </li>
+      <li> <a class="nav-menu-ico aip-type-5-ico" href="/commonPage/gamePage/loading.html?apiId=34&amp;apiTypeId=5"> <span>棋牌</span> </a> </li>
+      <li> <a class="nav-menu-ico aip-type-2-ico" href="/casino.html?apiType=2&amp;apiId="> <span>电子游艺</span> </a> </li>
+      <li> <a class="nav-menu-ico aip-type-1-ico" href="/live.html"> <span>真人视讯</span> </a> </li>
+      <li> <a class="nav-menu-ico aip-type-promo-ico" href="/promo.html"> <span>优惠活动</span> </a> </li>
+    </ul>
+  </div>
+  <div class="banner-bg-t"></div>
+  <div class="banner-bg"><img src="images/bannerbg.jpg"> </div>
+</div>
+<div id="page-content" class="wrapper" style="min-height: 800px;"> 
+  <!--left-->
+  <div class="sidebar"> 
+    <!--左边菜单栏-->
+    <div class="sidebar-nav _nav_title">
+      <div class="left-nav-title">财务中心</div>
+      <dl>
+        <dt class=""> <a  nav-target='mainFrame'
+                                                    data="/fund/playerTransfer/transfers.html?t=930824"  href="transfers.html"> <i class="navico home"></i> 额度转换</a> </dt>
+      </dl>
+      <dl>
+        <dt class=""> <a  nav-target='mainFrame'
+                                                    data="recharge.html?t=930824"  href="recharge.html"> <i class="navico deposit"></i> 存款专区</a> </dt>
+      </dl>
+      <dl>
+        <dt class=""> <a  nav-target='mainFrame'
+                                                    data="/player/withdraw/withdrawList.html?t=930824"  href="withdrawList.html"> <i class="navico withdraw"></i> 取款专区</a> </dt>
+      </dl>
+      <dl>
+        <dt class=""> <a  nav-target='mainFrame'
+                                                    data="/fund/transaction/list.html?t=930824"  href="list.html"> <i class="navico capital"></i> 资金记录</a> </dt>
+      </dl>
+      <dl>
+        <dt class=""> <a  nav-target='mainFrame'
+                                                    data="/gameOrder/index.html?t=930824"  href="gameOrder.html"> <i class="navico gamerecord"></i> 投注记录</a> </dt>
+      </dl>
+      <dl>
+        <dt class=""> <a  nav-target='mainFrame'
+                                                    data="/preferential/list.html?t=930824"  href="preferential.html"> <i class="navico sale"></i> 优惠记录</a> </dt>
+      </dl>
+      <div class="left-nav-title">个人中心</div>
+      <dl>
+        <dt class=""> <a  nav-target='mainFrame'
+                                                    data="gameNotice.html?t=930824"  href="gameNotice.html"> <i class="navico info"></i> 消息公告</a> </dt>
+      </dl>
+      <dl>
+        <dt class="select"> <a  nav-target='mainFrame'
+                                                    data="/personInfo/index.html?t=930824"  href="personInfo.html"> <i class="navico accout"></i> 个人资料</a> </dt>
+      </dl>
+      <dl>
+        <dt class=""> <a  nav-target='mainFrame'
+                                                    data="/playerRecommendAward/recommendBonus.html?t=930824"  href="recommendBonus.html"> <i class="navico recommend"></i> 全民推广</a> </dt>
+      </dl>
+      <dl>
+        <dt class=""> <a  nav-target='mainFrame'
+                                                    data="/personInfo/password/index.html?t=930824"  href="password.html"> <i class="navico recommend"></i> 修改密码</a> </dt>
+      </dl>
+    </div>
+  </div>
+  <!--right-->
+  <div id="mainFrame" class="main-wrap"><!--//region your codes １-->
+    <div class="notice">
+      <div class="notice-left"><em class="path"></em></div>
+      <div class="path-right">玩家中心<span class="arrow">&gt;</span>个人资料</div>
+    </div>
+    <!--账号设置-->
+    <form id="personInfo" action="/pcenter/personInfo/index.html?t=352540&amp;_=1555327558646" method="post" novalidate>
+       
+      <input type="hidden" name="gb.token" value="58d91731-89ec-421f-b5f5-428ee63c34b3">
+      <div class="user-info">
+        <div class="user-info-left portrait"> <a href="toUploadHeadPortrait.html" nav-target="mainFrame" class="pInfo">点击修改头像</a>
+          <p class="edit-bg"> <img src="images/default_portrait.png" width="85px" height="85px"> </p>
+        </div>
+        <div class="user-info-right">
+          <p class="gray"> <span>欢迎游戏，</span> <span class="orange">linda</span> &nbsp;&nbsp;再忙也要起来走一走</p>
+          <p> <span class="spacewidth"> <i class="gray">主货币：</i> CNY人民币</span> </p>
+          <p> <span class="spacewidth"> <i class="gray">上次登录时间：</i> 2019-04-15 14:15:43</span> </p>
+        </div>
+      </div>
+      
+      <!--//region your codes １-->
+      <div class="rgeechar">
+        <div class="title"> <span class="tips"><i class="mark plaintsmall"></i>完善个人资料能提升账户安全，设置后只能联系客服修改，请谨慎填写!<a href="https://chat6.livechatvalue.com/chat/chatClient/chatbox.jsp?companyID=262911&amp;configID=43611&amp;jid=3663497425&amp;s=1" target="_blank">联系客服</a></span> </div>
+      </div>
+      <div class="account-list account-info-warp">
+        <div class="left-ico-message"> <span class="account-info-title">账户安全<img src="images/safety-b.png"></span>
+          <div class="control-grouptwo">
+            <label class="control-left">安全问题：</label>
+            <div class="controls">
+              <select class="selectwidth valid" name="sysUserProtection.question1" ajaxlistpathpure="/pcenter/selectCommonController/getMasterQuestions.html" listkey="dictCode" listvalue="remark" initprompt="请选择" callback="" aria-invalid="false">
+                <option value="">请选择</option>
+                <option value="1"> 您小时候最喜欢哪一本书？</option>
+                <option value="2"> 您的理想工作是什么？</option>
+                <option value="3"> 您童年时代的绰号是什么？</option>
+                <option value="4"> 您拥有的第一辆车是什么型号？</option>
+                <option value="5"> 您在学生时代最喜欢哪个歌手或乐队？</option>
+                <option value="6"> 您在学生时代最喜欢哪个电影明星或角色？</option>
+                <option value="7"> 您的第一个上司叫什么名字？</option>
+                <option value="8"> 您的父母是在哪里认识的？</option>
+                <option value="9"> 您的第一个宠物叫什么名字？</option>
+                <option value="10"> 您少年时代最好的朋友叫什么名字？</option>
+                <option value="11"> 您第一次去电影院看的是哪一部电影？</option>
+                <option value="12"> 您学会做的第一道菜是什么？</option>
+                <option value="13"> 您上小学时最喜欢的老师姓什么？</option>
+                <option value="14"> 您第一次坐飞机是去哪里？</option>
+                <option value="15"> 您从小长大的那条街叫什么？</option>
+                <option value="16"> 您去过的第一个海滨浴场是哪一个？</option>
+                <option value="17"> 您购买的第一张专辑是什么？</option>
+                <option value="18"> 您最喜欢哪个球队？</option>
+              </select>
+            </div>
+          </div>
+          <div class="control-grouptwo">
+            <label class="control-left">答案：</label>
+            <div class="controls">
+              <input type="text" class="input field-input valid" name="sysUserProtection.answer1" aria-invalid="false" value="">
+            </div>
+          </div>
+          <div class=" control-group">
+            <label class="control-label"></label>
+            <div class="controls">您当前尚未设置银行卡！ <a href="toUserBank.html" nav-target="mainFrame">立即新增</a></div>
+          </div>
+        </div>
+        <hr>
+        <div class="left-ico-message"> <span class="account-info-title">个人信息<img src="images/info-b.png"></span>
+          <input type="hidden" name="result.realName" value="111">
+          <input type="hidden" name="realName" value="111">
+          <input type="hidden" class="input" name="result.defaultLocale" value="zh_CN">
+          <input type="hidden" name="result.sex" value="">
+          <input type="hidden" name="result.birthday" value="">
+          <input type="hidden" name="weixin.contactValue" value="">
+          <input type="hidden" value="" name="weixin.id">
+          <input type="hidden" name="qq.contactValue" value="">
+          <input type="hidden" value="" name="qq.id">
+          <div class="control-group" id="submitInfo" style="margin-left:255px;"> <a title="消息" class="btn-blue btn large-big disable-gray ui-button-disable" data-rel="{&quot;precall&quot;:&quot;validateForm&quot;,&quot;callback&quot;:&quot;mySaveCallBack&quot;,post:&quot;&quot;,opType:&quot;function&quot;,dataType:&quot;&quot;,target:&quot;updatePerson&quot;,confirm:&quot;&quot;,text:&quot;消息&quot;,size:&quot;&quot; }"> 提交 </a> </div>
+        </div>
+      </div>
+      <!--//endregion your codes １-->
+    </form>
+    <!--//endregion your codes １--> 
+    <!--//region your codes 3--> 
+    
+    <!--//endregion your codes 3--> 
+  </div>
+</div>
+</body>
+</html>
