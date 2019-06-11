@@ -1,0 +1,175 @@
+$blue: #3190e8;  
+$bc: #e4e4e4;
+$fc:#fff;
+$design-width: 750;
+
+@function px2rem( $px )
+{
+  @return $px/$design-width*10 + rem; //对应js 
+}
+// 背景图片地址和大小
+@mixin background($url) { 
+	background-image: url($url);
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+}
+
+@mixin borderRadius($radius) {
+    // -webkit-border-radius: $radius;
+    // -moz-border-radius: $radius;
+    // -ms-border-radius: $radius;
+    // -o-border-radius: $radius;
+    border-radius: $radius;
+}
+//定位全屏
+@mixin allcover{
+	position:absolute;
+	top:0;
+	right:0;
+}
+
+//定位上下左右居中
+@mixin center {  
+	position: absolute;
+	top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+//定位上下居中
+@mixin ct {  
+	position: absolute;
+	top: 50%;
+    transform: translateY(-50%);
+}
+
+//定位上下居中
+@mixin cl {  
+	position: absolute;
+	left: 50%;
+    transform: translateX(-50%);
+}
+
+//宽高
+@mixin wh($width, $height){
+	width: $width;
+	height: $height;
+}
+
+//字体大小、行高、字体
+@mixin font($size, $line-height, $family: 'Microsoft YaHei') {  
+    font: #{$size}/#{$line-height} $family;
+}
+
+//字体大小，颜色
+@mixin sc($size, $color){
+	font-size: $size;
+	color: $color;
+}
+
+//flex 布局和 子元素 对其方式
+@mixin fj($type: space-between){
+	display: flex;
+	justify-content: $type;
+
+}
+@mixin ellipsis-overflow {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    display: inline-block;
+}
+//@include opacity;  opacity的兼容方案
+@mixin opacity($opacity:.65,$support-for-ie:true) {
+    opacity: $opacity;
+    @if $support-for-ie{
+        $opacity-ie: $opacity * 100;
+        filter: alpha(opacity=$opacity-ie); //IE8
+    }
+}
+
+//@include inline-block;  行内元素display:inline-block;的兼容方案
+@mixin inline-block($alignment: middle,$support-for-ie:true) {
+    display: inline-block;
+    @if $alignment and $alignment != none {
+        vertical-align: $alignment;
+    }
+    @if $support-for-ie {
+        *vertical-align: inherit;
+        zoom: 1;
+        *display: inline-block;
+    }
+}
+//@include float;  浮动
+@mixin float($direction: left,$support-for-ie:false){
+    float: $direction;
+    @if $support-for-ie{
+        _display: inline;
+    }
+}
+//@include利用translate可以实现未知宽高的东东水平/垂直居中
+@mixin center-translate($direction: both) {
+    position: absolute;
+    @if $direction == both {
+        top: 50%;
+        left: 50%;
+        -webkit-transform: translate3d(-50%, -50%, 0);
+        transform: translate3d(-50%, -50%, 0);
+    }
+    @else if $direction == horizontal {
+        left: 50%;
+        -webkit-transform: translate3d(-50%, 0, 0);
+        transform: translate3d(-50%, 0, 0);
+    }
+    @else if $direction == vertical {
+        top: 50%;
+        -webkit-transform: translate3d(0, -50%, 0);
+        transform: translate3d(0, -50%, 0);
+    }
+}
+@mixin border-radius($radius){
+    border-radius:$radius;
+};
+@mixin triangle($direction, $size, $borderColor ) { 
+		content:""; 
+		height: 0; 
+		width: 0; 
+	@if $direction == top { 
+		border-bottom:$size solid $borderColor; 
+		border-left:$size dashed transparent; 
+		border-right:$size dashed transparent;
+	 } @else if $direction == right { 
+		border-left:$size solid $borderColor; 
+		border-top:$size dashed transparent; 
+		border-bottom:$size dashed transparent;
+	 } @else if $direction == bottom { 
+		border-top:$size solid $borderColor; 
+		border-left:$size dashed transparent;
+		border-right:$size dashed transparent; 
+     }@else if $direction == left { 
+		border-right:$size solid $borderColor; 
+		border-top:$size dashed transparent; 
+		border-bottom:$size dashed transparent; 
+	}
+}
+@mixin flex(){
+	display:box;
+	box-align:center;
+	display:flex;
+	align-items:center;
+}
+@mixin fll(){
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+    -webkit-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+    -webkit-box-align: stretch;
+    -webkit-align-items: stretch;
+    align-items: stretch;
+}
